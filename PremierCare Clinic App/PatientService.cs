@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace PremierCare_Clinic_App
 {
+	//Service Implementation for the Patient Class
+	//For Business Logic as well as DAO operations
 	public class PatientService {
 		PatientDAO patientDAO = new PatientDAO();
 
