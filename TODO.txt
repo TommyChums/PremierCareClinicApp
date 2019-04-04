@@ -1,0 +1,5 @@
+1. Add comments to CSR.cs file
+2. Create Staff class
+3. Create Appointment class
+4. Create Patient_Treatment class
+5. Create Invoice class
