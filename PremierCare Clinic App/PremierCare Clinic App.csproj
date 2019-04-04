@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CSR.cs" />
+    <Compile Include="CSRService.cs" />
     <Compile Include="Drug.cs" />
     <Compile Include="DrugService.cs" />
     <Compile Include="Form1.cs">
