@@ -19,6 +19,10 @@ namespace PremierCare_Clinic_App
 			return patientDAO.GetPatients();
 		}
 
+		public Patient GetPatientById(int id) {
+			return patientDAO.GetPatientById(id);
+		}
+
 		public List<Patient> GetPatients(string term) {
 			return patientDAO.GetPatients(term);
 		}

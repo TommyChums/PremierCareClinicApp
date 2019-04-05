@@ -20,6 +20,10 @@ namespace PremierCare_Clinic_App
 			return serviceDAO.GetServices();
 		}
 
+		public Service GetServiceById(int id) {
+			return serviceDAO.GetServiceById(id);
+		}
+
 		public List<Service> GetServices(string term) {
 			return serviceDAO.GetServices(term);
 		}

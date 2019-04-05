@@ -7,26 +7,30 @@ using System.Threading.Tasks;
 namespace PremierCare_Clinic_App
 {
     public class DoctorService {
-        DoctorDAO DoctorDAO = new DoctorDAO();
+        DoctorDAO doctorDAO = new DoctorDAO();
 
         public bool CreateDoctor(Doctor doctor) {
-	        return DoctorDAO.CreateDoctor(doctor);
+	        return doctorDAO.CreateDoctor(doctor);
         }
 
         public List<Doctor> GetDoctors() {
-	        return DoctorDAO.GetDoctors();
+	        return doctorDAO.GetDoctors();
+        }
+
+        public Doctor GetDoctorById(int id) {
+	        return doctorDAO.GetDoctorById(id);
         }
 
         public List<Doctor> GetDoctors(string term) {
-	        return DoctorDAO.GetDoctors(term);
+	        return doctorDAO.GetDoctors(term);
         }
 
         public bool UpdateDoctor(Doctor doctor) {
-	        return DoctorDAO.UpdateDoctor(doctor);
+	        return doctorDAO.UpdateDoctor(doctor);
         }
 
         public bool DeleteDoctor(Doctor doctor) {
-	        return DoctorDAO.DeleteDoctor(doctor);
+	        return doctorDAO.DeleteDoctor(doctor);
         }
     }
 }

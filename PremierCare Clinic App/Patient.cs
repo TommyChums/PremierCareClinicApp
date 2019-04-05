@@ -65,8 +65,22 @@ namespace PremierCare_Clinic_App
 		    }
 	    }
 
-		//Method to Retrieve all Patients in the Database that have a field containing the term
-	    public List<Patient> GetPatients(string term) {
+	    //Method to retrieve a Patient by their id
+	    public Patient GetPatientById(int id) {
+		    //Connect to database using the connection string from App.config
+		    //Using a 'using' block to terminate the connection after we're finished with it
+		    using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
+			    //SQL code to select the patient from the Patient table by id
+			    const string sql = "SELECT * FROM Patient WHERE patient_id = @patient_id";
+
+			    //Adding parameters to the code to prevent against SQL injection
+			    //Queries the database executing the SQL code and returns the Patient
+			    return connection.QuerySingle<Patient>(sql, new { patient_id = id });
+		    }
+	    }
+
+        //Method to Retrieve all Patients in the Database that have a field containing the term
+        public List<Patient> GetPatients(string term) {
 		    //Connect to database using the connection string from App.config
 		    //Using a 'using' block to terminate the connection after we're finished with it
             using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {

@@ -41,6 +41,14 @@ namespace PremierCare_Clinic_App
 		    }
         }
 
+	    public Doctor GetDoctorById(int id) {
+		    using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
+			    const string sql = "SELECT * FROM Doctor WHERE doctor_id = @doctor_id";
+
+			    return connection.QuerySingle<Doctor>(sql, new {doctor_id = id});
+		    }
+	    }
+
 	    public List<Doctor> GetDoctors(string term) {
 		    using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
 			    const string sql =

@@ -56,6 +56,20 @@ namespace PremierCare_Clinic_App
 			}
 		}
 
+		//Method to retrieve a Drug by it's id
+		public Drug GetDrugById(int id) {
+			//Connect to database using the connection string from App.config
+			//Using a 'using' block to terminate the connection after we're finished with it
+            using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
+	            //SQL code to select the drug from the Drug table by id
+                const string sql = "SELECT * FROM Drug WHERE drug_id = @drug_id";
+
+				//Adding parameters to the code to prevent against SQL injection
+				//Queries the database executing the SQL code and returns the Drug
+                return connection.QuerySingle<Drug>(sql, new {drug_id = id});
+			}
+		}
+
         //Method to retrieve all Drugs in the database that have a field containing the term
         public List<Drug> GetDrugs(string term) {
 	        //Connect to database using the connection string from App.config

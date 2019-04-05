@@ -48,6 +48,20 @@ namespace PremierCare_Clinic_App
 		    }
         }
 
+		//Method to Retrieve a Service by it's id
+        public Service GetServiceById(int id) {
+	        //Connect to database using the connection string from App.config
+	        //Using a 'using' block to terminate the connection after we're finished with it
+            using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
+	            //SQL code to select the service from the Service table by id
+                const string sql = "SELECT * FROM Service WHERE service_id = @service_id";
+
+                //Adding parameters to the code to prevent against SQL injection
+                //Queries the database executing the SQL code and returns the Service
+                return connection.QuerySingle<Service>(sql, new {service_id = id});
+	        }
+        }
+
         //Method to Retrieve all Services in the Database that have a field containing the term
         public List<Service> GetServices(string term) {
 		    //Connect to database using the connection string from App.config
