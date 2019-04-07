@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Appointment.cs" />
+    <Compile Include="AppointmentService.cs" />
     <Compile Include="Csr_Login.cs" />
     <Compile Include="Doctor.cs" />
     <Compile Include="DoctorService.cs" />
