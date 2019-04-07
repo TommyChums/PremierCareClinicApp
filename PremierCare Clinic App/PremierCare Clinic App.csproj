@@ -68,27 +68,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Appointment.cs" />
-    <Compile Include="AppointmentService.cs" />
+    <Compile Include="Appointment\Appointment.cs" />
+    <Compile Include="Appointment\AppointmentService.cs" />
     <Compile Include="Csr_Login.cs" />
-    <Compile Include="Doctor.cs" />
-    <Compile Include="DoctorService.cs" />
-    <Compile Include="Drug.cs" />
-    <Compile Include="DrugService.cs" />
+    <Compile Include="Doctor\Doctor.cs" />
+    <Compile Include="Doctor\DoctorService.cs" />
+    <Compile Include="Drug\Drug.cs" />
+    <Compile Include="Drug\DrugService.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Patient.cs" />
-    <Compile Include="PatientService.cs" />
+    <Compile Include="Invoice\Invoice.cs" />
+    <Compile Include="Invoice\InvoiceService.cs" />
+    <Compile Include="Patient\Patient.cs" />
+    <Compile Include="Patient\PatientService.cs" />
+    <Compile Include="Patient_Treatment\Patient_Treatment.cs" />
+    <Compile Include="Patient_Treatment\Patient_TreatmentService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service.cs" />
-    <Compile Include="ServiceService.cs" />
-    <Compile Include="Staff.cs" />
-    <Compile Include="StaffService.cs" />
+    <Compile Include="Service\Service.cs" />
+    <Compile Include="Service\ServiceService.cs" />
+    <Compile Include="Staff\Staff.cs" />
+    <Compile Include="Staff\StaffService.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,5 +121,6 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

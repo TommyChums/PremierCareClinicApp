@@ -18,7 +18,7 @@ namespace PremierCare_Clinic_App
 	    public List<Csr_Login> GetCsrLogins() {
 		    using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
 			    const string sql = "SELECT * FROM Csr_Login";
-
+				
 			    return connection.Query<Csr_Login>(sql).AsList();
 		    }
         }
