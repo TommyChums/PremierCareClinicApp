@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="premiercareclinicDataSet1" targetNamespace="http://tempuri.org/premiercareclinicDataSet1.xsd" xmlns:mstns="http://tempuri.org/premiercareclinicDataSet1.xsd" xmlns="http://tempuri.org/premiercareclinicDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="server=localhost;user id=root;password=r1card014345;database=premiercareclinic" IsAppSettingsProperty="false" Modifier="Assembly" Name="localhost(premiercareclinic)" ParameterPrefix="@" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="drugTableAdapter" GeneratorDataComponentClassName="drugTableAdapter" Name="drug" UserDataComponentName="drugTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="localhost(premiercareclinic)" DbObjectName="premiercareclinic.drug" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `drug_id`, `drug_name`, `cost`, `lengths_of_time`, `no_of_times_per_day` FROM `drug`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="premiercareclinicDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="premiercareclinicDataSet1" msprop:Generator_UserDSName="premiercareclinicDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="drug" msprop:Generator_TableClassName="drugDataTable" msprop:Generator_TableVarName="tabledrug" msprop:Generator_TablePropName="drug" msprop:Generator_RowDeletingName="drugRowDeleting" msprop:Generator_RowChangingName="drugRowChanging" msprop:Generator_RowEvHandlerName="drugRowChangeEventHandler" msprop:Generator_RowDeletedName="drugRowDeleted" msprop:Generator_UserTableName="drug" msprop:Generator_RowChangedName="drugRowChanged" msprop:Generator_RowEvArgName="drugRowChangeEvent" msprop:Generator_RowClassName="drugRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Dapper;
 using MySql.Data.MySqlClient;
 
-namespace PremierCare_Clinic_App
+namespace PremierCare_Clinic_App.Doctor
 {
     public class Doctor {
 	    public int doctor_id { get; set; }

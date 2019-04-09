@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PremierCare_Clinic_App
+namespace PremierCare_Clinic_App.Service
 {
 	//Service Implementation for the Service Class
 	//For Business Logic as well as DAO operations

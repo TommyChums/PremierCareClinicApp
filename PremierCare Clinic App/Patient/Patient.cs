@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using Dapper;
 using MySql.Data.MySqlClient;
 
-namespace PremierCare_Clinic_App
+namespace PremierCare_Clinic_App.Patient
 {
 	//Patient Model with attributes matching Database
     public class Patient {
@@ -86,11 +86,11 @@ namespace PremierCare_Clinic_App
             using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
 				//SQL code to select all patients from the Patient table where any field contains the term
 			    const string sql = "SELECT * FROM Patient " +
-			                       "WHERE patient_name LIKE %@term% OR contact_no LIKE %@term% OR address LIKE %@term% OR DOB LIKE %@term% OR allergies LIKE %@term% OR blood_type LIKE %@term%";
+			                       "WHERE patient_name LIKE @term OR contact_no LIKE @term OR address LIKE @term OR DOB LIKE @term OR allergies LIKE @term OR blood_type LIKE @term";
 
 			    //Adding parameters to the code to prevent against SQL injection
                 //Queries the database executing the SQL code and returns it as a list of patients
-                return connection.Query<Patient>(sql, new {term = term}).AsList();
+                return connection.Query<Patient>(sql, new {term = "%" + term + "%"}).AsList();
 		    }
         }
 

@@ -70,31 +70,63 @@
   <ItemGroup>
     <Compile Include="Appointment\Appointment.cs" />
     <Compile Include="Appointment\AppointmentService.cs" />
-    <Compile Include="Csr_Login.cs" />
+    <Compile Include="Login\Csr_Login.cs" />
     <Compile Include="Doctor\Doctor.cs" />
     <Compile Include="Doctor\DoctorService.cs" />
     <Compile Include="Drug\Drug.cs" />
     <Compile Include="Drug\DrugService.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Login\LoggedInStaff.cs" />
+    <Compile Include="Patient\PatientForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Patient\PatientForm.Designer.cs">
+      <DependentUpon>PatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\StaffLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\StaffLoginForm.Designer.cs">
+      <DependentUpon>StaffLoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoice\Invoice.cs" />
     <Compile Include="Invoice\InvoiceService.cs" />
     <Compile Include="Patient\Patient.cs" />
     <Compile Include="Patient\PatientService.cs" />
+    <Compile Include="Patient\ViewPatientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\ViewPatientsForm.Designer.cs">
+      <DependentUpon>ViewPatientsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient_Treatment\Patient_Treatment.cs" />
     <Compile Include="Patient_Treatment\Patient_TreatmentService.cs" />
+    <Compile Include="premiercareclinicDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>premiercareclinicDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="premiercareclinicDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>premiercareclinicDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\Service.cs" />
     <Compile Include="Service\ServiceService.cs" />
     <Compile Include="Staff\Staff.cs" />
     <Compile Include="Staff\StaffService.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Patient\PatientForm.aa-ET.resx">
+      <DependentUpon>PatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\PatientForm.resx">
+      <DependentUpon>PatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\StaffLoginForm.resx">
+      <DependentUpon>StaffLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\ViewPatientsForm.resx">
+      <DependentUpon>ViewPatientsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -106,6 +138,29 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="premiercareclinicDataSet.xsc">
+      <DependentUpon>premiercareclinicDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="premiercareclinicDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>premiercareclinicDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="premiercareclinicDataSet.xss">
+      <DependentUpon>premiercareclinicDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="premiercareclinicDataSet1.xsc">
+      <DependentUpon>premiercareclinicDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="premiercareclinicDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>premiercareclinicDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="premiercareclinicDataSet1.xss">
+      <DependentUpon>premiercareclinicDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\PremierCare_Clinic_App.Drug.Drug.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

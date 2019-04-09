@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using Dapper;
 
-namespace PremierCare_Clinic_App
+namespace PremierCare_Clinic_App.Service
 {
 	//Service Model with attributes matching database
     public class Service {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Dapper;
 using MySql.Data.MySqlClient;
 
-namespace PremierCare_Clinic_App
+namespace PremierCare_Clinic_App.Login
 {
     public class Csr_Login {
 	    public string login_password { get; set; }
@@ -28,7 +28,7 @@ namespace PremierCare_Clinic_App
         Csr_LoginDAO csrLoginDao = new Csr_LoginDAO();
         StaffService staffService = new StaffService();
 
-        public List<Csr_Login> GetCsrLogins() {
+        private List<Csr_Login> GetCsrLogins() {
 	        return csrLoginDao.GetCsrLogins();
         }
 

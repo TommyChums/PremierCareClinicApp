@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Dapper;
 using MySql.Data.MySqlClient;
 
-namespace PremierCare_Clinic_App
+namespace PremierCare_Clinic_App.Appointment
 {
     public class Appointment {
 	    public int appointment_id { get; set; }

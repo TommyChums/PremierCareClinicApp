@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PremierCare_Clinic_App
+namespace PremierCare_Clinic_App.Patient_Treatment
 {
     public class Patient_TreatmentService {
 	    private Patient_TreatmentDAO treatmentDAO = new Patient_TreatmentDAO();

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PremierCare_Clinic_App.Login;
 
 namespace PremierCare_Clinic_App
 {
@@ -12,11 +13,10 @@ namespace PremierCare_Clinic_App
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
-        {
+        static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new StaffLoginForm());
         }
     }
 }

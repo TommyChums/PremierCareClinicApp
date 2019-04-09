@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PremierCare_Clinic_App
+namespace PremierCare_Clinic_App.Patient
 {
 	//Service Implementation for the Patient Class
 	//For Business Logic as well as DAO operations

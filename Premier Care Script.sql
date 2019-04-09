@@ -9,8 +9,8 @@ Create Table Patient (
     contact_no varchar(50) not null,
     address varchar(255) not null,
     DOB varchar(50) not null,
-    allergies varchar(255) not null,
-    blood_type varchar(50) not null
+    allergies varchar(255),
+    blood_type varchar(50)
 );
 
 DROP Table If Exists Drug;

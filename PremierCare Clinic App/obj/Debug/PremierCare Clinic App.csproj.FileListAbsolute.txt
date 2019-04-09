@@ -2,7 +2,6 @@ E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final P
 E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\bin\Debug\PremierCare Clinic App.exe
 E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\bin\Debug\PremierCare Clinic App.pdb
 E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare Clinic App.csprojAssemblyReference.cache
-E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare_Clinic_App.Form1.resources
 E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare_Clinic_App.Properties.Resources.resources
 E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare Clinic App.csproj.GenerateResource.cache
 E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare Clinic App.csproj.CoreCompileInputs.cache
@@ -24,3 +23,9 @@ E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final P
 E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\bin\Debug\Remotion.Linq.xml
 E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\bin\Debug\Remotion.Linq.EagerFetching.xml
 E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare Clinic App.csproj.CopyComplete
+E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare_Clinic_App.Patient.PatientForm.resources
+E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare_Clinic_App.Login.StaffLoginForm.resources
+E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\bin\Debug\aa-ET\PremierCare Clinic App.resources.dll
+E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare_Clinic_App.Patient.PatientForm.aa-ET.resources
+E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\aa-ET\PremierCare Clinic App.resources.dll
+E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare_Clinic_App.Patient.ViewPatientsForm.resources

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Dapper;
 using MySql.Data.MySqlClient;
 
-namespace PremierCare_Clinic_App
+namespace PremierCare_Clinic_App.Drug
 {
 	//Drug Model with attributes matching Database
 	public class Drug {
