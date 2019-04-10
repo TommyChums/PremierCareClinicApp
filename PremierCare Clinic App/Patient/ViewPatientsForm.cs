@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PremierCare_Clinic_App.Appointment;
 
 namespace PremierCare_Clinic_App.Patient
 {
@@ -52,6 +53,15 @@ namespace PremierCare_Clinic_App.Patient
         private void patientGridView_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e) {
 	        selectedPatient = patientService.GetPatientById(int.Parse(patientGridView.Rows[e.RowIndex].Cells[0].Value.ToString()));
             updatePatientBtn_Click(sender, e);
+        }
+
+        private void createAppointment_Click(object sender, EventArgs e) {
+	        if (selectedPatient == null) return;
+
+            var appointmentForm = new Appointment_Form();
+			appointmentForm.SelectPatient(selectedPatient);
+			appointmentForm.Show();
+			this.Hide();
         }
     }
 }

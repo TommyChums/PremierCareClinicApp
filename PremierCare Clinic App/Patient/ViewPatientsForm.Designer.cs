@@ -36,6 +36,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.updatePatientBtn = new System.Windows.Forms.Button();
+            this.createAppointment = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.patientGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +62,7 @@
             this.textBox1.Location = new System.Drawing.Point(2, 87);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(587, 29);
+            this.textBox1.Size = new System.Drawing.Size(391, 29);
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -96,7 +97,7 @@
             // updatePatientBtn
             // 
             this.updatePatientBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updatePatientBtn.Location = new System.Drawing.Point(595, 87);
+            this.updatePatientBtn.Location = new System.Drawing.Point(410, 86);
             this.updatePatientBtn.Name = "updatePatientBtn";
             this.updatePatientBtn.Size = new System.Drawing.Size(135, 30);
             this.updatePatientBtn.TabIndex = 5;
@@ -104,11 +105,23 @@
             this.updatePatientBtn.UseVisualStyleBackColor = true;
             this.updatePatientBtn.Click += new System.EventHandler(this.updatePatientBtn_Click);
             // 
+            // createAppointment
+            // 
+            this.createAppointment.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createAppointment.Location = new System.Drawing.Point(564, 86);
+            this.createAppointment.Name = "createAppointment";
+            this.createAppointment.Size = new System.Drawing.Size(161, 30);
+            this.createAppointment.TabIndex = 6;
+            this.createAppointment.Text = "Create Appointment";
+            this.createAppointment.UseVisualStyleBackColor = true;
+            this.createAppointment.Click += new System.EventHandler(this.createAppointment_Click);
+            // 
             // ViewPatientsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 491);
+            this.Controls.Add(this.createAppointment);
             this.Controls.Add(this.updatePatientBtn);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.patientLookUpLabel);
@@ -137,5 +150,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button updatePatientBtn;
+        private System.Windows.Forms.Button createAppointment;
     }
 }

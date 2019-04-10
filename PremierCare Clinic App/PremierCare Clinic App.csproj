@@ -68,8 +68,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appointment\Appointment Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointment\Appointment Form.Designer.cs">
+      <DependentUpon>Appointment Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Appointment\Appointment.cs" />
     <Compile Include="Appointment\AppointmentService.cs" />
+    <Compile Include="Appointment\ViewAppointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointment\ViewAppointments.Designer.cs">
+      <DependentUpon>ViewAppointments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\Csr_Login.cs" />
     <Compile Include="Doctor\Doctor.cs" />
     <Compile Include="Doctor\DoctorService.cs" />
@@ -106,6 +118,12 @@
     <Compile Include="Service\ServiceService.cs" />
     <Compile Include="Staff\Staff.cs" />
     <Compile Include="Staff\StaffService.cs" />
+    <EmbeddedResource Include="Appointment\Appointment Form.resx">
+      <DependentUpon>Appointment Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointment\ViewAppointments.resx">
+      <DependentUpon>ViewAppointments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Patient\PatientForm.aa-ET.resx">
       <DependentUpon>PatientForm.cs</DependentUpon>
     </EmbeddedResource>

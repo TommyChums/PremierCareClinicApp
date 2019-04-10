@@ -59,14 +59,16 @@ Create Table Appointment (
 	appointment_id int auto_increment not null primary key,
     appointment_date varchar(50) not null,
     appointment_time varchar(50) not null,
-    appointment_details varchar(255),
+    appointment_details varchar(255) not null,
     patient_id int not null,
     doctor_id int not null,
     staff_id int not null,
+    service_id int not null,
     appointment_completed bool not null,
     foreign key (patient_id) references Patient(patient_id),
     foreign key (doctor_id) references Doctor(doctor_id),
-    foreign key (staff_id) references Staff(staff_id)
+    foreign key (staff_id) references Staff(staff_id),
+    foreign key (service_id) references Service(service_id)
 );
 
 DROP Table If Exists Patient_Treatment;

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PremierCare_Clinic_App.Appointment;
 using PremierCare_Clinic_App.Login;
 using PremierCare_Clinic_App.Patient;
 
@@ -35,9 +36,11 @@ namespace PremierCare_Clinic_App.Login
 	        }
 
 	        this.Hide();
-			var patientForm = new PatientForm();
-	        //var patientForm = new ViewPatientsForm();
+	        //var patientForm = new Appointment_Form();
+			var patientForm1 = new PatientForm();
+	        var patientForm = new ViewPatientsForm();
 	        patientForm.Show();
+			patientForm1.Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) {

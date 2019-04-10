@@ -13,6 +13,7 @@ namespace PremierCare_Clinic_App.Appointment
 	    public int patient_id { get; set; }
 	    public int doctor_id { get; set; }
 	    public int staff_id { get; set; }
+		public int service_id { get; set; }
 	    public bool appointment_completed { get; set; }
     }
 
@@ -20,15 +21,15 @@ namespace PremierCare_Clinic_App.Appointment
 	    public bool CreateAppointment(Appointment appointment) {
 		    using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
                 const string sql =
-                    "INSERT INTO Appointment(appointment_date, appointment_time, appointment_details, patient_id, doctor_id, staff_id, appointment_completed) " +
-                    "VALUES(@date, @time, @details, @patient, @doctor, @staff, @completed";
+                    "INSERT INTO Appointment(appointment_date, appointment_time, appointment_details, patient_id, doctor_id, staff_id, service_id, appointment_completed) " +
+                    "VALUES(@date, @time, @details, @patient, @doctor, @staff, @service, @completed)";
 
                 var rowsAffected = connection.Execute(sql,
 	                new {
 		                date = appointment.appointment_date, time = appointment.appointment_time,
 		                details = appointment.appointment_details, patient = appointment.patient_id,
 		                doctor = appointment.doctor_id, staff = appointment.staff_id,
-		                completed = appointment.appointment_completed
+						service = appointment.service_id, completed = appointment.appointment_completed
 	                });
 
                 return rowsAffected > 0;
@@ -62,12 +63,13 @@ namespace PremierCare_Clinic_App.Appointment
 	    public bool UpdateAppointment(Appointment appointment) {
 		    using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
 			    const string sql =
-				    "UPDATE Appointment SET appointment_date = @date, appointment_time = @time, appointment_details = @details, appointment_completed = @completed";
+				    "UPDATE Appointment SET appointment_date = @date, appointment_time = @time, appointment_details = @details, service_id = @service, appointment_completed = @completed";
 
 			    var rowsAffected = connection.Execute(sql,
 				    new {
 					    date = appointment.appointment_date, time = appointment.appointment_time,
-					    details = appointment.appointment_details, completed = appointment.appointment_completed
+					    details = appointment.appointment_details, service = appointment.service_id,
+					    completed = appointment.appointment_completed
 				    });
 
 			    return rowsAffected > 0;

@@ -133,6 +133,7 @@ namespace PremierCare_Clinic_App.Patient
 	        DOBTxtBox.ResetText();
 	        allergiesTxtBox.Clear();
 	        bloodTypeTxtBox.ResetText();
+	        patientToUpdate = null;
         }
 
         private void contactNoTxtBox_Validating(object sender, CancelEventArgs e) {
