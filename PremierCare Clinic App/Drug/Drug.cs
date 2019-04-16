@@ -14,8 +14,6 @@ namespace PremierCare_Clinic_App.Drug
 		public int drug_id { get; set; }
 		public string drug_name { get; set; }
 		public int cost { get; set; }
-		public string lengths_of_time { get; set; }
-		public string no_of_times_per_day { get; set; }
 	}
 
 	//Drug Data Access Object for accessing and performing database operations
@@ -26,15 +24,13 @@ namespace PremierCare_Clinic_App.Drug
 			//Using a 'using' block to terminate the connection after we're finished with it
             using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
 				//SQL code to insert the drug into the database
-				const string sql = "INSERT INTO Drug(drug_name, cost, lengths_of_time, no_of_times_per_day) VALUES(@drug_name, @cost, @lengths_of_time, @no_of_times_per_day)";
+				const string sql = "INSERT INTO Drug(drug_name, cost) VALUES(@drug_name, @cost)";
 
                 //Adding parameters to the code to prevent against SQL injection
                 //Executing the SQL code with added parameters. Returns number of Rows affected
                 var rowsAffected = connection.Execute(sql, new {
 					drug_name = drug.drug_name,
-					cost = drug.cost,
-					lengths_of_time = drug.lengths_of_time,
-					no_of_times_per_day = drug.no_of_times_per_day
+					cost = drug.cost
 				});
 
                 //A successful insert will affect at least 1 Row and will return true
@@ -76,7 +72,7 @@ namespace PremierCare_Clinic_App.Drug
 	        //Using a 'using' block to terminate the connection after we're finished with it
             using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
 				//SQL code to select all drugs from the Drug table that have a field containing the term
-				const string sql = "SELECT * FROM Drug WHERE drug_name LIKE %@term% OR cost LIKE %@term% OR lengths_of_time LIKE %@term% OR no_of_times_per_day LIKE %@term%";
+				const string sql = "SELECT * FROM Drug WHERE drug_name LIKE %@term% OR cost LIKE %@term%";
 
 				//Queries the database executing the SQL code and returns it as a list of drugs
                 return connection.Query<Drug>(sql, new {term = term}).AsList();
@@ -90,15 +86,13 @@ namespace PremierCare_Clinic_App.Drug
 			using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
 				//SQL code to update the given drug
 				const string sql =
-					"UPDATE Drug SET drug_name = @drug_name, cost = @cost, lengths_of_time = @lengths_of_time, no_of_times_per_day = @no_of_times_per_day";
+					"UPDATE Drug SET drug_name = @drug_name, cost = @cost";
 
 				//Adding parameters to the code to prevent against SQL injection
 				//Executing the SQL code with added parameters. Returns number of Rows affected
                 var rowsAffected = connection.Execute(sql, new {
 					drug_name = drug.drug_name,
-					cost = drug.cost,
-					lengths_of_time = drug.lengths_of_time,
-					no_of_times_per_day = drug.no_of_times_per_day
+					cost = drug.cost
 				});
 
                 //A successful update will affect at least 1 Row and will return true

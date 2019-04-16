@@ -2,6 +2,8 @@ DROP Database If Exists PremierCareClinic;
 Create Database PremierCareClinic ;
 use PremierCareClinic;
 
+# Create Tables {
+
 DROP Table If Exists Patient;
 Create Table Patient (
 	patient_id int auto_increment not null primary key,
@@ -17,9 +19,7 @@ DROP Table If Exists Drug;
 Create Table Drug (
 	drug_id int auto_increment not null primary key,
     drug_name varchar(255) not null,
-    cost int not null,
-    lengths_of_time varchar(50) not null,
-    no_of_times_per_day int not null
+    cost int not null
 );
 
 DROP Table If Exists Service;
@@ -74,6 +74,8 @@ Create Table Appointment (
 DROP Table If Exists Patient_Treatment;
 Create Table Patient_Treatment (
 	treatment_id int auto_increment not null primary key,
+    dosage_per_day int not null,
+    duration_in_days int not null,
     patient_id int not null,
 	drug_id int not null,
     foreign key (patient_id) references Patient(patient_id),
@@ -85,8 +87,24 @@ Create Table Invoice (
 	invoice_id int auto_increment not null primary key,
     patient_id int not null,
     service_id int not null,
+    treatment_completed bool not null,
     foreign key (patient_id) references Patient(patient_id),
     foreign key (service_id) references Service(service_id)
 );
 
+# } end of Tables
+
+# Create Procedures {
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetAppointments`(IN staff int)
+BEGIN
+SELECT patient_name, appointment_date, appointment_time, service_category, doctor_name , appointment_completed 
+FROM Patient, Appointment, Service, Doctor
+WHERE Patient.patient_id = Appointment.patient_id AND Service.service_id = Appointment.service_id 
+AND Doctor.doctor_id = Appointment.doctor_id AND Appointment.staff_id = staff;
+END$$
+DELIMITER ;
+
+# } end of Procedures
 

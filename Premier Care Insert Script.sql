@@ -1,16 +1,16 @@
 use premiercareclinic;
 #Insert for Drug
-INSERT INTO Drug(drug_name, cost, lengths_of_time, no_of_times_per_day) VALUES("Panadol Ultra", 5, 2, 3);
-INSERT INTO Drug(drug_name, cost, lengths_of_time, no_of_times_per_day) VALUES("Panadol Multisymptom", 5, 2, 3);
-INSERT INTO Drug(drug_name, cost, lengths_of_time, no_of_times_per_day) VALUES("Gravol", 30, 1, 1);
-INSERT INTO Drug(drug_name, cost, lengths_of_time, no_of_times_per_day) VALUES("Panadine", 20, 3, 1);
-INSERT INTO Drug(drug_name, cost, lengths_of_time, no_of_times_per_day) VALUES("Advil", 50, 7, 3);
+INSERT INTO Drug(drug_name, cost, lengths_of_time, no_of_times_per_day) VALUES("Panadol Ultra", 5);
+INSERT INTO Drug(drug_name, cost, lengths_of_time, no_of_times_per_day) VALUES("Panadol Multisymptom", 5);
+INSERT INTO Drug(drug_name, cost, lengths_of_time, no_of_times_per_day) VALUES("Gravol", 30);
+INSERT INTO Drug(drug_name, cost, lengths_of_time, no_of_times_per_day) VALUES("Panadine", 20);
+INSERT INTO Drug(drug_name, cost, lengths_of_time, no_of_times_per_day) VALUES("Advil", 50);
 
 #Insert for Service
 INSERT INTO Service(cost, service_category) VALUES(250, "pediatrics");
 INSERT INTO Service(cost, service_category) VALUES(350, "general practice");
 INSERT INTO Service(cost, service_category) VALUES(300, "specialist");
-INSERT INTO Service(cost, service_category) VALUES(400, "labratory");
+INSERT INTO Service(cost, service_category) VALUES(400, "laboratory");
 INSERT INTO Service(cost, service_category) VALUES(350, "therapy");
 INSERT INTO Service(cost, service_category) VALUES(150, "x-ray");
 

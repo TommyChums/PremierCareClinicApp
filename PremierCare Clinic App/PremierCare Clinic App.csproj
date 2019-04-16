@@ -76,11 +76,17 @@
     </Compile>
     <Compile Include="Appointment\Appointment.cs" />
     <Compile Include="Appointment\AppointmentService.cs" />
-    <Compile Include="Appointment\ViewAppointments.cs">
+    <Compile Include="Appointment\UpdateAppointmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Appointment\ViewAppointments.Designer.cs">
-      <DependentUpon>ViewAppointments.cs</DependentUpon>
+    <Compile Include="Appointment\UpdateAppointmentForm.Designer.cs">
+      <DependentUpon>UpdateAppointmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment\ViewAppointmentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointment\ViewAppointmentsForm.Designer.cs">
+      <DependentUpon>ViewAppointmentsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\Csr_Login.cs" />
     <Compile Include="Doctor\Doctor.cs" />
@@ -104,6 +110,12 @@
     <Compile Include="Invoice\InvoiceService.cs" />
     <Compile Include="Patient\Patient.cs" />
     <Compile Include="Patient\PatientService.cs" />
+    <Compile Include="Patient\PatientTreatmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\PatientTreatmentForm.Designer.cs">
+      <DependentUpon>PatientTreatmentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient\ViewPatientsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,8 +133,11 @@
     <EmbeddedResource Include="Appointment\Appointment Form.resx">
       <DependentUpon>Appointment Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Appointment\ViewAppointments.resx">
-      <DependentUpon>ViewAppointments.cs</DependentUpon>
+    <EmbeddedResource Include="Appointment\UpdateAppointmentForm.resx">
+      <DependentUpon>UpdateAppointmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointment\ViewAppointmentsForm.resx">
+      <DependentUpon>ViewAppointmentsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\PatientForm.aa-ET.resx">
       <DependentUpon>PatientForm.cs</DependentUpon>
@@ -132,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\StaffLoginForm.resx">
       <DependentUpon>StaffLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\PatientTreatmentForm.resx">
+      <DependentUpon>PatientTreatmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\ViewPatientsForm.resx">
       <DependentUpon>ViewPatientsForm.cs</DependentUpon>
@@ -144,6 +162,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\PremierCare_Clinic_App.Drug.Drug.datasource" />
@@ -162,6 +181,11 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\BackBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseBtn.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

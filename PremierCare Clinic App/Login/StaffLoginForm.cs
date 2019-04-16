@@ -36,9 +36,11 @@ namespace PremierCare_Clinic_App.Login
 	        }
 
 	        this.Hide();
-	        //var patientForm = new Appointment_Form();
-			var patientForm1 = new PatientForm();
-	        var patientForm = new ViewPatientsForm();
+	        var patientForm = new PatientTreatmentForm();
+	        //var patientForm1 = new Appointment_Form();
+			//var patientForm1 = new PatientForm();
+	        //var patientForm = new ViewPatientsForm();
+			var patientForm1 = new ViewAppointmentsForm();
 	        patientForm.Show();
 			patientForm1.Show();
         }
@@ -49,6 +51,11 @@ namespace PremierCare_Clinic_App.Login
 
         private void pictureBox1_MouseHover(object sender, EventArgs e) {
 	        toolTip1.SetToolTip(pictureBox1, "Exit the program");
+        }
+
+        private void StaffLoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

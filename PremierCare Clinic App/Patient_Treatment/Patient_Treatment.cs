@@ -11,6 +11,8 @@ namespace PremierCare_Clinic_App.Patient_Treatment
 {
     public class Patient_Treatment {
 		public int treatment_id { get; set; }
+		public int dosage_per_day { get; set; }
+		public int duration_in_days { get; set; }
         public int patient_id { get; set; }
         public int drug_id { get; set; }
     }
@@ -18,10 +20,10 @@ namespace PremierCare_Clinic_App.Patient_Treatment
     public class Patient_TreatmentDAO {
 	    public bool CreatePatientTreatment(Patient_Treatment treatment) {
 		    using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
-			    const string sql = "INSERT INTO Patient_Treatment(patient_id, drug_id) VALUES(@patient, @drug)";
+			    const string sql = "INSERT INTO Patient_Treatment(dosage_per_day, duration_in_days, patient_id, drug_id) VALUES(@dosage, @duration, @patient, @drug)";
 
 			    var rowsAffected =
-				    connection.Execute(sql, new {patient = treatment.patient_id, drug = treatment.drug_id});
+				    connection.Execute(sql, new {dosage = treatment.dosage_per_day, duration = treatment.duration_in_days, patient = treatment.patient_id, drug = treatment.drug_id});
 
 			    return rowsAffected > 0;
 		    }
@@ -54,10 +56,10 @@ namespace PremierCare_Clinic_App.Patient_Treatment
 
 	    public bool UpdatePatientTreatment(Patient_Treatment treatment) {
 		    using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
-			    const string sql = "UPDATE Patient_Treatment SET patient_id = @patient, drug_id = @drug WHERE treatment_id = @treatment";
+			    const string sql = "UPDATE Patient_Treatment SET dosage_per_day = @dosage, duration_in_days = @duration, drug_id = @drug WHERE treatment_id = @treatment";
 
                 var rowsAffected =
-                    connection.Execute(sql, new { patient = treatment.patient_id, drug = treatment.drug_id, treatment = treatment.treatment_id });
+                    connection.Execute(sql, new { dosage = treatment.dosage_per_day, duration = treatment.duration_in_days, drug = treatment.drug_id, treatment = treatment.treatment_id });
 
                 return rowsAffected > 0;
 		    }

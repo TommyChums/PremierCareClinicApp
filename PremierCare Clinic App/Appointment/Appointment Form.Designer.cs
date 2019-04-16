@@ -73,6 +73,7 @@
             // patientNameLabel
             // 
             this.patientNameLabel.AutoSize = true;
+            this.patientNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.patientNameLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.patientNameLabel.Location = new System.Drawing.Point(12, 153);
             this.patientNameLabel.Name = "patientNameLabel";
@@ -83,6 +84,7 @@
             // appointmentFormLabel
             // 
             this.appointmentFormLabel.AutoSize = true;
+            this.appointmentFormLabel.BackColor = System.Drawing.Color.Transparent;
             this.appointmentFormLabel.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.appointmentFormLabel.ForeColor = System.Drawing.Color.DarkTurquoise;
             this.appointmentFormLabel.Location = new System.Drawing.Point(431, 24);
@@ -103,6 +105,7 @@
             // contactNoLabel
             // 
             this.contactNoLabel.AutoSize = true;
+            this.contactNoLabel.BackColor = System.Drawing.Color.Transparent;
             this.contactNoLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactNoLabel.Location = new System.Drawing.Point(12, 226);
             this.contactNoLabel.Name = "contactNoLabel";
@@ -122,6 +125,7 @@
             // addressLabel
             // 
             this.addressLabel.AutoSize = true;
+            this.addressLabel.BackColor = System.Drawing.Color.Transparent;
             this.addressLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addressLabel.Location = new System.Drawing.Point(12, 298);
             this.addressLabel.Name = "addressLabel";
@@ -132,6 +136,7 @@
             // patientInformationLabel
             // 
             this.patientInformationLabel.AutoSize = true;
+            this.patientInformationLabel.BackColor = System.Drawing.Color.Transparent;
             this.patientInformationLabel.Font = new System.Drawing.Font("Trebuchet MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.patientInformationLabel.Location = new System.Drawing.Point(11, 105);
             this.patientInformationLabel.Name = "patientInformationLabel";
@@ -151,6 +156,7 @@
             // bloodTypeLabel
             // 
             this.bloodTypeLabel.AutoSize = true;
+            this.bloodTypeLabel.BackColor = System.Drawing.Color.Transparent;
             this.bloodTypeLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bloodTypeLabel.Location = new System.Drawing.Point(12, 517);
             this.bloodTypeLabel.Name = "bloodTypeLabel";
@@ -170,6 +176,7 @@
             // allergiesLabel
             // 
             this.allergiesLabel.AutoSize = true;
+            this.allergiesLabel.BackColor = System.Drawing.Color.Transparent;
             this.allergiesLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.allergiesLabel.Location = new System.Drawing.Point(12, 445);
             this.allergiesLabel.Name = "allergiesLabel";
@@ -189,6 +196,7 @@
             // dobLabel
             // 
             this.dobLabel.AutoSize = true;
+            this.dobLabel.BackColor = System.Drawing.Color.Transparent;
             this.dobLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dobLabel.Location = new System.Drawing.Point(12, 372);
             this.dobLabel.Name = "dobLabel";
@@ -199,7 +207,9 @@
             // doctorInformationLabel
             // 
             this.doctorInformationLabel.AutoSize = true;
+            this.doctorInformationLabel.BackColor = System.Drawing.Color.Transparent;
             this.doctorInformationLabel.Font = new System.Drawing.Font("Trebuchet MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doctorInformationLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.doctorInformationLabel.Location = new System.Drawing.Point(461, 105);
             this.doctorInformationLabel.Name = "doctorInformationLabel";
             this.doctorInformationLabel.Size = new System.Drawing.Size(214, 27);
@@ -218,6 +228,7 @@
             // doctorSpecialtyLabel
             // 
             this.doctorSpecialtyLabel.AutoSize = true;
+            this.doctorSpecialtyLabel.BackColor = System.Drawing.Color.Transparent;
             this.doctorSpecialtyLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.doctorSpecialtyLabel.Location = new System.Drawing.Point(462, 372);
             this.doctorSpecialtyLabel.Name = "doctorSpecialtyLabel";
@@ -237,6 +248,7 @@
             // doctorAddressLabel
             // 
             this.doctorAddressLabel.AutoSize = true;
+            this.doctorAddressLabel.BackColor = System.Drawing.Color.Transparent;
             this.doctorAddressLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.doctorAddressLabel.Location = new System.Drawing.Point(462, 298);
             this.doctorAddressLabel.Name = "doctorAddressLabel";
@@ -256,6 +268,7 @@
             // doctorContactNumberLabel
             // 
             this.doctorContactNumberLabel.AutoSize = true;
+            this.doctorContactNumberLabel.BackColor = System.Drawing.Color.Transparent;
             this.doctorContactNumberLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.doctorContactNumberLabel.Location = new System.Drawing.Point(462, 226);
             this.doctorContactNumberLabel.Name = "doctorContactNumberLabel";
@@ -266,6 +279,7 @@
             // doctorNameLabel
             // 
             this.doctorNameLabel.AutoSize = true;
+            this.doctorNameLabel.BackColor = System.Drawing.Color.Transparent;
             this.doctorNameLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.doctorNameLabel.Location = new System.Drawing.Point(462, 153);
             this.doctorNameLabel.Name = "doctorNameLabel";
@@ -276,6 +290,7 @@
             // appointmentInformationLabel
             // 
             this.appointmentInformationLabel.AutoSize = true;
+            this.appointmentInformationLabel.BackColor = System.Drawing.Color.Transparent;
             this.appointmentInformationLabel.Font = new System.Drawing.Font("Trebuchet MS", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.appointmentInformationLabel.Location = new System.Drawing.Point(905, 105);
             this.appointmentInformationLabel.Name = "appointmentInformationLabel";
@@ -286,6 +301,7 @@
             // dateLabel
             // 
             this.dateLabel.AutoSize = true;
+            this.dateLabel.BackColor = System.Drawing.Color.Transparent;
             this.dateLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateLabel.Location = new System.Drawing.Point(906, 153);
             this.dateLabel.Name = "dateLabel";
@@ -317,6 +333,7 @@
             // timeLabel
             // 
             this.timeLabel.AutoSize = true;
+            this.timeLabel.BackColor = System.Drawing.Color.Transparent;
             this.timeLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timeLabel.Location = new System.Drawing.Point(906, 226);
             this.timeLabel.Name = "timeLabel";
@@ -327,6 +344,7 @@
             // appointmentDetailsLabel
             // 
             this.appointmentDetailsLabel.AutoSize = true;
+            this.appointmentDetailsLabel.BackColor = System.Drawing.Color.Transparent;
             this.appointmentDetailsLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.appointmentDetailsLabel.Location = new System.Drawing.Point(906, 372);
             this.appointmentDetailsLabel.Name = "appointmentDetailsLabel";
@@ -356,6 +374,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(8, 7);
@@ -404,6 +423,7 @@
             // serviceLabel
             // 
             this.serviceLabel.AutoSize = true;
+            this.serviceLabel.BackColor = System.Drawing.Color.Transparent;
             this.serviceLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.serviceLabel.Location = new System.Drawing.Point(906, 298);
             this.serviceLabel.Name = "serviceLabel";
@@ -419,6 +439,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1211, 679);
             this.Controls.Add(this.serviceBox);
             this.Controls.Add(this.serviceLabel);
@@ -458,6 +480,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Appointment_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Appointment_Form";
             this.Load += new System.EventHandler(this.Appointment_Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

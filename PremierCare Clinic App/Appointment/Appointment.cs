@@ -1,7 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
+using System.Data.Common;
 using Dapper;
 using MySql.Data.MySqlClient;
+using NHibernate.Linq.Functions;
 
 namespace PremierCare_Clinic_App.Appointment
 {
@@ -14,6 +18,16 @@ namespace PremierCare_Clinic_App.Appointment
 	    public int doctor_id { get; set; }
 	    public int staff_id { get; set; }
 		public int service_id { get; set; }
+	    public bool appointment_completed { get; set; }
+    }
+
+    public class DisplayedAppointment {
+	    public int appointment_id { get; set; }
+	    public string patient_name { get; set; }
+	    public string appointment_date { get; set; }
+	    public string appointment_time { get; set; }
+	    public string service_category { get; set; }
+	    public string doctor_name { get; set; }
 	    public bool appointment_completed { get; set; }
     }
 
@@ -44,11 +58,11 @@ namespace PremierCare_Clinic_App.Appointment
 		    }
         }
 
-	    public List<Appointment> GetAppointments(Staff csr) {
+	    public List<DisplayedAppointment> GetAppointments(Staff csr) {
 		    using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
-			    const string sql = "SELECT * FROM Appointment WHERE staff_id = @staffId";
-
-			    return connection.Query<Appointment>(sql, new {staffId = csr.staff_id}).AsList();
+			    const string sql = "GetAppointments";
+				
+			    return connection.Query<DisplayedAppointment>(sql, new {staff = csr.staff_id}, commandType: CommandType.StoredProcedure).AsList();
 		    }
 	    }
 
@@ -63,13 +77,14 @@ namespace PremierCare_Clinic_App.Appointment
 	    public bool UpdateAppointment(Appointment appointment) {
 		    using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
 			    const string sql =
-				    "UPDATE Appointment SET appointment_date = @date, appointment_time = @time, appointment_details = @details, service_id = @service, appointment_completed = @completed";
+				    "UPDATE Appointment SET appointment_date = @date, appointment_time = @time, appointment_details = @details, appointment_completed = @completed " +
+				    "WHERE appointment_id = @id";
 
 			    var rowsAffected = connection.Execute(sql,
 				    new {
 					    date = appointment.appointment_date, time = appointment.appointment_time,
-					    details = appointment.appointment_details, service = appointment.service_id,
-					    completed = appointment.appointment_completed
+					    details = appointment.appointment_details, completed = appointment.appointment_completed,
+					    id = appointment.appointment_id
 				    });
 
 			    return rowsAffected > 0;

@@ -16,6 +16,7 @@ namespace PremierCare_Clinic_App.Patient
 		PatientService patientService = new PatientService();
 		private Patient selectedPatient;
 
+
         public ViewPatientsForm() {
 	        
             InitializeComponent();
@@ -61,6 +62,13 @@ namespace PremierCare_Clinic_App.Patient
             var appointmentForm = new Appointment_Form();
 			appointmentForm.SelectPatient(selectedPatient);
 			appointmentForm.Show();
+			this.Hide();
+        }
+
+        private void treatmentBtn_Click(object sender, EventArgs e) {
+	        var treatmentForm = new PatientTreatmentForm();
+			treatmentForm.setPatient(selectedPatient);
+            treatmentForm.Show();
 			this.Hide();
         }
     }

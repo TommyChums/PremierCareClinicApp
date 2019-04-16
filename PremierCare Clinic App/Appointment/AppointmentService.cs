@@ -18,7 +18,7 @@ namespace PremierCare_Clinic_App.Appointment
 		    return appointmentDAO.GetAppointments();
 	    }
 
-	    public List<Appointment> GetAppointments(Staff staff) {
+	    public List<DisplayedAppointment> GetAppointments(Staff staff) {
 		    return appointmentDAO.GetAppointments(staff);
 	    }
 
@@ -32,6 +32,50 @@ namespace PremierCare_Clinic_App.Appointment
 
 	    public bool DeleteAppointment(Appointment appointment) {
 		    return appointmentDAO.DeleteAppointment(appointment);
+	    }
+
+	    public List<DisplayedAppointment> GetAppointments(Staff staff, string term, string date, bool dateActive) {
+            var appointments = appointmentDAO.GetAppointments(staff);
+
+            var displayedAppointments = new List<DisplayedAppointment>();
+
+            foreach (var appointment in appointments) {
+	            if (!dateActive) {
+		            if (appointment.patient_name.ToLower().Contains(term) || appointment.service_category.ToLower().Contains(term) ||
+		                appointment.doctor_name.ToLower().Contains(term) || appointment.appointment_date.ToLower().Contains(term) ||
+		                appointment.appointment_time.ToLower().Contains(term)) {
+			            displayedAppointments.Add(appointment);
+		            }
+                }
+	            else {
+		            if ((appointment.patient_name.ToLower().Contains(term) || appointment.service_category.ToLower().Contains(term) ||
+		                appointment.doctor_name.ToLower().Contains(term) || appointment.appointment_time.ToLower().Contains(term)) && appointment.appointment_date.ToLower().Equals(date)) {
+			            displayedAppointments.Add(appointment);
+		            }
+                }
+            }
+
+            return displayedAppointments;
+	    }
+
+	    public List<DisplayedAppointment> GetAppointmentsByDate(Staff staff, string date) {
+		    var appointments = appointmentDAO.GetAppointments(staff);
+
+		    var displayedAppointments = new List<DisplayedAppointment>();
+
+		    foreach (var appointment in appointments) {
+			    if (appointment.appointment_date.Equals(date)) {
+					displayedAppointments.Add(appointment);
+			    }
+		    }
+
+		    return displayedAppointments;
+	    }
+
+	    public bool UpdateCompletionStatus(Appointment appointment) {
+		    appointment.appointment_completed = !appointment.appointment_completed;
+
+		    return appointmentDAO.UpdateAppointment(appointment);
 	    }
     }
 }

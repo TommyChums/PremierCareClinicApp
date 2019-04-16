@@ -90,6 +90,10 @@ namespace PremierCare_Clinic_App.Appointment
                 return;
 	        }
 
+	        if (selectedPatient == null) {
+		        return;
+	        }
+
 	        appointment = new Appointment() {
 		        appointment_date = appointmentDate.Text,
 		        appointment_time = appointmentTime.Text,
