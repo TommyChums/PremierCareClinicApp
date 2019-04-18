@@ -8,5 +8,6 @@ namespace PremierCare_Clinic_App.Login
 {
     public static class LoggedInStaff {
 	    public static Staff loggedInStaff { get; set; }
+		public static Doctor.Doctor loggedInDoctor { get; set; }
     }
 }

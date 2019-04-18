@@ -126,7 +126,7 @@
             this.treatmentBtn.Name = "treatmentBtn";
             this.treatmentBtn.Size = new System.Drawing.Size(118, 30);
             this.treatmentBtn.TabIndex = 7;
-            this.treatmentBtn.Text = "Treatment";
+            this.treatmentBtn.Text = "Prescriptions";
             this.treatmentBtn.UseVisualStyleBackColor = true;
             this.treatmentBtn.Click += new System.EventHandler(this.treatmentBtn_Click);
             // 

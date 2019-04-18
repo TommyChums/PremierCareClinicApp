@@ -93,6 +93,7 @@
     <Compile Include="Doctor\DoctorService.cs" />
     <Compile Include="Drug\Drug.cs" />
     <Compile Include="Drug\DrugService.cs" />
+    <Compile Include="Login\Doctor_Login.cs" />
     <Compile Include="Login\LoggedInStaff.cs" />
     <Compile Include="Patient\PatientForm.cs">
       <SubType>Form</SubType>
@@ -110,11 +111,11 @@
     <Compile Include="Invoice\InvoiceService.cs" />
     <Compile Include="Patient\Patient.cs" />
     <Compile Include="Patient\PatientService.cs" />
-    <Compile Include="Patient\PatientTreatmentForm.cs">
+    <Compile Include="Patient\PrescriptionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Patient\PatientTreatmentForm.Designer.cs">
-      <DependentUpon>PatientTreatmentForm.cs</DependentUpon>
+    <Compile Include="Patient\PrescriptionForm.Designer.cs">
+      <DependentUpon>PrescriptionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient\ViewPatientsForm.cs">
       <SubType>Form</SubType>
@@ -122,8 +123,8 @@
     <Compile Include="Patient\ViewPatientsForm.Designer.cs">
       <DependentUpon>ViewPatientsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Patient_Treatment\Patient_Treatment.cs" />
-    <Compile Include="Patient_Treatment\Patient_TreatmentService.cs" />
+    <Compile Include="Prescription\Prescription.cs" />
+    <Compile Include="Prescription\PrescriptionService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\Service.cs" />
@@ -148,8 +149,8 @@
     <EmbeddedResource Include="Login\StaffLoginForm.resx">
       <DependentUpon>StaffLoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Patient\PatientTreatmentForm.resx">
-      <DependentUpon>PatientTreatmentForm.cs</DependentUpon>
+    <EmbeddedResource Include="Patient\PrescriptionForm.resx">
+      <DependentUpon>PrescriptionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\ViewPatientsForm.resx">
       <DependentUpon>ViewPatientsForm.cs</DependentUpon>

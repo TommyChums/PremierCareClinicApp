@@ -23,10 +23,16 @@ namespace PremierCare_Clinic_App.Login
 
         private void loginButton_Click(object sender, EventArgs e) {
 	        var loginService = new Csr_LoginService();
+			var docLoginService = new Doctor_LoginService();
+	        bool rightPassword = false;
 
 	        LoggedInStaff.loggedInStaff = loginService.Login(passwordField.Text);
+	        if (LoggedInStaff.loggedInStaff == null)
+		        LoggedInStaff.loggedInDoctor = docLoginService.GetDoctor(passwordField.Text);
 
-	        if (LoggedInStaff.loggedInStaff == null) {
+	        if (LoggedInStaff.loggedInStaff != null || LoggedInStaff.loggedInDoctor != null) rightPassword = true;
+
+	        if (!rightPassword) {
 		        errorProvider1.SetError(passwordField, "Invalid Password");
 				errorProvider1.SetIconAlignment(passwordField, ErrorIconAlignment.MiddleLeft);
 				errorProvider1.SetIconPadding(passwordField, 2);
@@ -35,14 +41,32 @@ namespace PremierCare_Clinic_App.Login
                 return;
 	        }
 
-	        this.Hide();
-	        var patientForm = new PatientTreatmentForm();
-	        //var patientForm1 = new Appointment_Form();
-			//var patientForm1 = new PatientForm();
-	        //var patientForm = new ViewPatientsForm();
-			var patientForm1 = new ViewAppointmentsForm();
-	        patientForm.Show();
-			patientForm1.Show();
+	  //      this.Hide();
+	  //      var patientForm1 = new Appointment_Form();
+			//var patientForm2 = new PatientForm();
+	  //      var patientForm3 = new ViewPatientsForm();
+			//var patientForm4 = new ViewAppointmentsForm();
+			
+			//patientForm1.Show();
+			//patientForm2.Show();
+			//patientForm3.Show();
+			//patientForm4.Show();
+
+			if (LoggedInStaff.loggedInStaff == null) {
+				var patientsForm = new ViewPatientsForm();
+				patientsForm.isStaffMember(false);
+				patientsForm.Show();
+				this.Hide();
+			}
+			else {
+				var patientForm2 = new PatientForm();
+                var patientsForm = new ViewPatientsForm();
+				patientsForm.isStaffMember(true);
+				patientsForm.Show();
+				patientForm2.Show();
+                this.Hide();
+            }
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) {

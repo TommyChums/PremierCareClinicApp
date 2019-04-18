@@ -19,13 +19,13 @@ DROP Table If Exists Drug;
 Create Table Drug (
 	drug_id int auto_increment not null primary key,
     drug_name varchar(255) not null,
-    cost int not null
+    cost double not null
 );
 
 DROP Table If Exists Service;
 Create Table Service (
 	service_id int auto_increment not null primary key,
-    cost int not null,
+    cost double not null,
     service_category varchar(50) not null
 );
 
@@ -50,7 +50,9 @@ Create Table Staff (
 DROP Table If Exists Csr_Login;
 Create Table Csr_Login (
 	login_password varchar(255) not null primary key,
-    staff_id int not null unique,
+    staff_id int unique,
+    doctor_id int unique,
+    foreign key(doctor_id) references Doctor(doctor_id),
 	foreign key(staff_id) references Staff(staff_id)
 );
 
@@ -71,15 +73,17 @@ Create Table Appointment (
     foreign key (service_id) references Service(service_id)
 );
 
-DROP Table If Exists Patient_Treatment;
-Create Table Patient_Treatment (
-	treatment_id int auto_increment not null primary key,
+DROP Table If Exists Prescription;
+Create Table Prescription (
+	prescription_id int auto_increment not null primary key,
     dosage_per_day int not null,
     duration_in_days int not null,
     patient_id int not null,
 	drug_id int not null,
+    doctor_id int not null,
     foreign key (patient_id) references Patient(patient_id),
-    foreign key (drug_id) references Drug(drug_id)
+    foreign key (drug_id) references Drug(drug_id),
+    foreign key (doctor_id) references Doctor(doctor_id)
 );
 
 DROP Table If Exists Invoice;
@@ -87,7 +91,8 @@ Create Table Invoice (
 	invoice_id int auto_increment not null primary key,
     patient_id int not null,
     service_id int not null,
-    treatment_completed bool not null,
+    drug_names varchar(255),
+    total_cost double not null,
     foreign key (patient_id) references Patient(patient_id),
     foreign key (service_id) references Service(service_id)
 );

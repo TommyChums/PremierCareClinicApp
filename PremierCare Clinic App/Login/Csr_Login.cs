@@ -36,7 +36,7 @@ namespace PremierCare_Clinic_App.Login
 	        var loginPasswords = GetCsrLogins();
 
 	        foreach (var csrLogin in loginPasswords) {
-		        if (csrLogin.login_password.Equals(password))
+		        if (csrLogin.login_password.Equals(password) && csrLogin.staff_id != 0) 
 			        return staffService.GetStaffById(csrLogin.staff_id);
 	        }
 

@@ -15,11 +15,15 @@ namespace PremierCare_Clinic_App.Patient
     {
 		PatientService patientService = new PatientService();
 		private Patient selectedPatient;
-
+		private bool isStaff;
 
         public ViewPatientsForm() {
 	        
             InitializeComponent();
+        }
+
+        public void isStaffMember(bool staff) {
+	        isStaff = staff;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e) {
@@ -36,6 +40,11 @@ namespace PremierCare_Clinic_App.Patient
 
         private void ViewPatientsForm_Load(object sender, EventArgs e) {
 	        patientGridView.DataSource = patientService.GetPatients();
+
+	        if (!isStaff) createAppointment.Enabled = false;
+	        if (!isStaff) updatePatientBtn.Enabled = false;
+	        if (!isStaff) pictureBox2.Enabled = false;
+	        if (isStaff) treatmentBtn.Enabled = false;
         }
 
         private void patientGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
@@ -57,7 +66,7 @@ namespace PremierCare_Clinic_App.Patient
         }
 
         private void createAppointment_Click(object sender, EventArgs e) {
-	        if (selectedPatient == null) return;
+            if (selectedPatient == null) return;
 
             var appointmentForm = new Appointment_Form();
 			appointmentForm.SelectPatient(selectedPatient);
@@ -66,7 +75,8 @@ namespace PremierCare_Clinic_App.Patient
         }
 
         private void treatmentBtn_Click(object sender, EventArgs e) {
-	        var treatmentForm = new PatientTreatmentForm();
+	        if (selectedPatient == null) return;
+	        var treatmentForm = new PrescriptionForm();
 			treatmentForm.setPatient(selectedPatient);
             treatmentForm.Show();
 			this.Hide();

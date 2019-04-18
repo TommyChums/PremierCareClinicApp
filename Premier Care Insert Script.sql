@@ -1,10 +1,10 @@
 use premiercareclinic;
 #Insert for Drug
-INSERT INTO Drug(drug_name, cost, lengths_of_time, no_of_times_per_day) VALUES("Panadol Ultra", 5);
-INSERT INTO Drug(drug_name, cost, lengths_of_time, no_of_times_per_day) VALUES("Panadol Multisymptom", 5);
-INSERT INTO Drug(drug_name, cost, lengths_of_time, no_of_times_per_day) VALUES("Gravol", 30);
-INSERT INTO Drug(drug_name, cost, lengths_of_time, no_of_times_per_day) VALUES("Panadine", 20);
-INSERT INTO Drug(drug_name, cost, lengths_of_time, no_of_times_per_day) VALUES("Advil", 50);
+INSERT INTO Drug(drug_name, cost) VALUES("Panadol Ultra", 5);
+INSERT INTO Drug(drug_name, cost) VALUES("Panadol Multisymptom", 5);
+INSERT INTO Drug(drug_name, cost) VALUES("Gravol", 30);
+INSERT INTO Drug(drug_name, cost) VALUES("Panadine", 20);
+INSERT INTO Drug(drug_name, cost) VALUES("Advil", 50);
 
 #Insert for Service
 INSERT INTO Service(cost, service_category) VALUES(250, "pediatrics");
@@ -31,3 +31,9 @@ INSERT INTO Staff(staff_name, staff_contact_number, staff_address, staff_type) V
 #Insert for Csr_Login
 INSERT INTO Csr_Login(login_password, staff_id) VALUES("admin1", 5);
 INSERT INTO Csr_Login(login_password, staff_id) VALUES("admin2", 6);
+
+#Insert for Doctor_Login
+INSERT INTO Csr_Login(login_password, doctor_id) VALUES("doctor1", 1);
+INSERT INTO Csr_Login(login_password, doctor_id) VALUES("doctor2", 2);
+INSERT INTO Csr_Login(login_password, doctor_id) VALUES("doctor3", 3);
+INSERT INTO Csr_Login(login_password, doctor_id) VALUES("doctor4", 4);
