@@ -23,7 +23,7 @@ namespace PremierCare_Clinic_App.Drug
 		    return drugDAO.GetDrugById(id);
 	    }
 
-	    public List<Drug> GeDrugs(string term) {
+	    public List<Drug> GetDrugs(string term) {
 		    return drugDAO.GetDrugs(term);
 	    }
 

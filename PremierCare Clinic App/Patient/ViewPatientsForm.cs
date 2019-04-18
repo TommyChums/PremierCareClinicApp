@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PremierCare_Clinic_App.Appointment;
+using PremierCare_Clinic_App.Login;
 
 namespace PremierCare_Clinic_App.Patient
 {
@@ -15,7 +16,7 @@ namespace PremierCare_Clinic_App.Patient
     {
 		PatientService patientService = new PatientService();
 		private Patient selectedPatient;
-		private bool isStaff;
+		private bool isStaff = LoggedInStaff.loggedInDoctor == null;
 
         public ViewPatientsForm() {
 	        

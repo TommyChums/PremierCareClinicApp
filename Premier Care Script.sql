@@ -104,7 +104,7 @@ Create Table Invoice (
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `GetAppointments`(IN staff int)
 BEGIN
-SELECT patient_name, appointment_date, appointment_time, service_category, doctor_name , appointment_completed 
+SELECT appointment_id, patient_name, appointment_date, appointment_time, service_category, doctor_name , appointment_completed 
 FROM Patient, Appointment, Service, Doctor
 WHERE Patient.patient_id = Appointment.patient_id AND Service.service_id = Appointment.service_id 
 AND Doctor.doctor_id = Appointment.doctor_id AND Appointment.staff_id = staff;

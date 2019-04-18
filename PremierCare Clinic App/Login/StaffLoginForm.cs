@@ -54,16 +54,16 @@ namespace PremierCare_Clinic_App.Login
 
 			if (LoggedInStaff.loggedInStaff == null) {
 				var patientsForm = new ViewPatientsForm();
-				patientsForm.isStaffMember(false);
 				patientsForm.Show();
 				this.Hide();
 			}
 			else {
 				var patientForm2 = new PatientForm();
-                var patientsForm = new ViewPatientsForm();
-				patientsForm.isStaffMember(true);
+				var patientsForm = new ViewPatientsForm();
+                var patientForm4 = new ViewAppointmentsForm();
 				patientsForm.Show();
 				patientForm2.Show();
+				patientForm4.Show();
                 this.Hide();
             }
 
