@@ -55,8 +55,24 @@ namespace PremierCare_Clinic_App.Patient
         }
 
         private void treatmentBtn_Click(object sender, EventArgs e) {
-	       
-	       if (printDialog1.ShowDialog() == DialogResult.OK) { 
+	        if (numericUpDown1.Text.Equals("0") || numericUpDown2.Text.Equals("0")) {
+
+				errorProvider1.Clear();
+
+		        if (numericUpDown1.Text.Equals("0")) {
+			        errorProvider1.SetError(numericUpDown1, "Cannot be 0");
+		        }
+
+		        if (numericUpDown2.Text.Equals("0")) {
+			        errorProvider1.SetError(numericUpDown2, "Cannot be 0");
+		        }
+
+		        errorProvider1.BlinkRate = 0;
+
+		        return;
+	        }
+
+	        if (printDialog1.ShowDialog() == DialogResult.OK) { 
 			   printDocument1.Print();
 			   Prescription.Prescription prescription = new Prescription.Prescription() {
 				   dosage_per_day = int.Parse(numericUpDown1.Text),
@@ -72,7 +88,8 @@ namespace PremierCare_Clinic_App.Patient
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e) {
-	        e.Graphics.DrawString("Patient Name: " + patientNameTxtBox.Text
+	        e.Graphics.DrawString("Patient Name: " + patientNameTxtBox.Text 
+	                                               + "\n\nPatient ID: " + patient.patient_id
 	                                               + "\n\nPrescription: " + medicineBox.Text
 	                                               + "\n\nDosage: " + numericUpDown1.Text
 	                                               + " times per day for " + numericUpDown2.Text

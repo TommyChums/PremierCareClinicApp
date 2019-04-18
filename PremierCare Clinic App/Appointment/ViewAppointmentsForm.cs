@@ -122,7 +122,7 @@ namespace PremierCare_Clinic_App.Appointment
         }
 
         private void generateInvoiceBtn_Click(object sender, EventArgs e) {
-
+	        if (appointment == null || displayedAppointment == null) return;
 	        var invoicePatient = patientService.GetPatientById(appointment.patient_id);
 
             var invoiceService = serviceService.GetServiceById(appointment.service_id);
@@ -137,6 +137,7 @@ namespace PremierCare_Clinic_App.Appointment
 	        }
 
 	        StringBuilder stringBuilder = new StringBuilder();
+	        stringBuilder.AppendLine();
 	        foreach (var drugName in drugNames) {
 		        stringBuilder.AppendLine(drugName);
 	        }
@@ -152,20 +153,49 @@ namespace PremierCare_Clinic_App.Appointment
 				total_cost = invoiceTotalCost
 			};
 
-			MessageBox.Show(invoiceDAOService.CreateInvoice(invoice) ? "Invoice Successfully Generated!" : "Failed to Generate Invoice");
+			var created = invoiceDAOService.CreateInvoice(invoice);
+
+
+            MessageBox.Show(created ? "Invoice Successfully Generated!" : "Failed to Generate Invoice");
+
+            if (!created) return;
 
 			printPreviewDialog1.StartPosition = FormStartPosition.CenterScreen;
 			printPreviewDialog1.Size = new Size(480, 600);
-			if (printPreviewDialog1.ShowDialog() == DialogResult.OK) {
-				printDocument1.Print();
-			}
+
+			ToolStripButton b = new ToolStripButton();
+			b.Image = Properties.Resources.PrintIcon;
+			b.DisplayStyle = ToolStripItemDisplayStyle.Image;
+			b.Click += printPreview_PrintClick;
+			((ToolStrip)(printPreviewDialog1.Controls[1])).Items.RemoveAt(0);
+			((ToolStrip)(printPreviewDialog1.Controls[1])).Items.Insert(0, b);
+			printPreviewDialog1.ShowDialog();
+
+        }
+
+        private void printPreview_PrintClick(object sender, EventArgs e) {
+	        try {
+		        printDialog1.Document = printDocument1;
+		        if (printDialog1.ShowDialog() == DialogResult.OK) { 
+			        printDocument1.Print();
+					printPreviewDialog1.Close();
+			        foreach (var pres in prescriptionService.GetPatientPrescriptionByPatientId(appointment.patient_id)) {
+				        prescriptionService.DeletePatientPrescription(pres);
+			        }
+
+			        drugCost = 0;
+		        }
+	        }
+	        catch (Exception ex) {
+		        return;
+	        }
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e) {
 	        e.Graphics.DrawString("Patient Name: " + patientService.GetPatientById(appointment.patient_id).patient_name 
-	                                               + "\nMedication: " + invoice.drug_names + "\tcost: $" + drugCost 
-	                                               + "\nService: " + serviceService.GetServiceById(appointment.service_id).service_category + "\tcost: $" + serviceCost 
-	                                               + "\nTotal Cost: $" + (drugCost + serviceCost),
+	                                               + "\n\nMedication: " + invoice.drug_names + "cost: $" + drugCost 
+	                                               + "\n\nService: " + serviceService.GetServiceById(appointment.service_id).service_category + "\ncost: $" + serviceCost 
+	                                               + "\n\nTotal Cost: $" + (drugCost + serviceCost),
 		        new Font("Trebuchet MS", 28), new SolidBrush(Color.Black), 0, 0);
         }
     }

@@ -47,9 +47,11 @@
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.refreshPreview = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // medicineLabel
@@ -216,6 +218,10 @@
             this.refreshPreview.UseVisualStyleBackColor = true;
             this.refreshPreview.Click += new System.EventHandler(this.refreshPreview_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // PrescriptionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
@@ -244,6 +250,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +274,6 @@
         private System.Windows.Forms.PrintPreviewControl printPreviewControl1;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.Button refreshPreview;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
