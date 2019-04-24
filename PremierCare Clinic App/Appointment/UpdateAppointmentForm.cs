@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PremierCare_Clinic_App.Login;
 
 namespace PremierCare_Clinic_App.Appointment
 {
@@ -44,8 +45,9 @@ namespace PremierCare_Clinic_App.Appointment
 
         private void pictureBox1_Click(object sender, EventArgs e) {
             var viewAppointmentForm = new ViewAppointmentsForm();
-			viewAppointmentForm.Show();
-	        this.Close();
+            var LinkedForm = StaffLoginForm.LinkedForm;
+
+			LinkedForm.SetPanelForm(viewAppointmentForm);
         }
 
         private void updateButton_Click(object sender, EventArgs e) {
@@ -61,8 +63,7 @@ namespace PremierCare_Clinic_App.Appointment
             if (!updated) return;
 
             var viewAppointmentForm = new ViewAppointmentsForm();
-            viewAppointmentForm.Show();
-            this.Close();
+            StaffLoginForm.LinkedForm.SetPanelForm(viewAppointmentForm);
         }
     }
 }

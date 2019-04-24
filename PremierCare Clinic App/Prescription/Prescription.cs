@@ -75,5 +75,13 @@ namespace PremierCare_Clinic_App.Prescription
 			    return rowsAffected > 0;
 		    }
         }
+
+	    public List<Prescription> GetPatientPrescriptionRecords(int id) {
+		    using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
+			    const string sql = "SELECT * FROM Prescription_Record WHERE patient_id = @id";
+
+			    return connection.Query<Prescription>(sql, new {id = id}).AsList();
+		    }
+        }
     }
 }

@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,9 +15,10 @@ using PremierCare_Clinic_App.Patient;
 
 namespace PremierCare_Clinic_App.Login
 {
-    public partial class StaffLoginForm : Form
-    {
-		
+    public partial class StaffLoginForm : Form {
+
+	    public static LinkedForm LinkedForm = StaticClass.LinkedForm;
+
         public StaffLoginForm()
         {
             InitializeComponent();
@@ -52,21 +55,33 @@ namespace PremierCare_Clinic_App.Login
 			//patientForm3.Show();
 			//patientForm4.Show();
 
-			if (LoggedInStaff.loggedInStaff == null) {
-				var patientsForm = new ViewPatientsForm();
-				patientsForm.Show();
+			if (StaticClass.LinkedForm == null) {
+				
+				StaticClass.LinkedForm = new LinkedForm();
+				LinkedForm = StaticClass.LinkedForm;
+
+				LinkedForm.Show();
+
 				this.Hide();
-			}
+            }
 			else {
-				var patientForm2 = new PatientForm();
-				var patientsForm = new ViewPatientsForm();
-                var patientForm4 = new ViewAppointmentsForm();
-				patientsForm.Show();
-				patientForm2.Show();
-				patientForm4.Show();
+                //var patientForm2 = new PatientForm();
+                //var patientsForm = new ViewPatientsForm();
+                //            var patientForm4 = new ViewAppointmentsForm();
+                //patientsForm.Show();
+                //patientForm2.Show();
+                //patientForm4.Show();
+
+                LinkedForm.Show();
+
                 this.Hide();
             }
 
+        }
+
+        public void ShowForm() {
+            passwordField.Clear();
+            Show();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e) {
@@ -77,9 +92,8 @@ namespace PremierCare_Clinic_App.Login
 	        toolTip1.SetToolTip(pictureBox1, "Exit the program");
         }
 
-        private void StaffLoginForm_Load(object sender, EventArgs e)
-        {
-
+        private void StaffLoginForm_Load(object sender, EventArgs e) {
+	        passwordField.Clear();
         }
     }
 }

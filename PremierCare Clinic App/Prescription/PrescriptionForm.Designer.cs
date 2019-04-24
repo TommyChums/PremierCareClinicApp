@@ -1,4 +1,4 @@
-﻿namespace PremierCare_Clinic_App.Patient
+﻿namespace PremierCare_Clinic_App.Prescription
 {
     partial class PrescriptionForm
     {
@@ -57,80 +57,80 @@
             // medicineLabel
             // 
             this.medicineLabel.AutoSize = true;
-            this.medicineLabel.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.medicineLabel.Location = new System.Drawing.Point(19, 201);
+            this.medicineLabel.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medicineLabel.Location = new System.Drawing.Point(65, 275);
             this.medicineLabel.Name = "medicineLabel";
-            this.medicineLabel.Size = new System.Drawing.Size(66, 18);
+            this.medicineLabel.Size = new System.Drawing.Size(129, 35);
             this.medicineLabel.TabIndex = 2;
             this.medicineLabel.Text = "Medicine";
             // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel.Location = new System.Drawing.Point(19, 128);
+            this.nameLabel.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Location = new System.Drawing.Point(65, 164);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(93, 18);
+            this.nameLabel.Size = new System.Drawing.Size(185, 35);
             this.nameLabel.TabIndex = 3;
             this.nameLabel.Text = "Patient Name";
             // 
             // patientNameTxtBox
             // 
-            this.patientNameTxtBox.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientNameTxtBox.Location = new System.Drawing.Point(22, 152);
+            this.patientNameTxtBox.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientNameTxtBox.Location = new System.Drawing.Point(71, 216);
             this.patientNameTxtBox.Name = "patientNameTxtBox";
             this.patientNameTxtBox.ReadOnly = true;
-            this.patientNameTxtBox.Size = new System.Drawing.Size(161, 29);
+            this.patientNameTxtBox.Size = new System.Drawing.Size(287, 38);
             this.patientNameTxtBox.TabIndex = 4;
             // 
             // medicineBox
             // 
-            this.medicineBox.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.medicineBox.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.medicineBox.FormattingEnabled = true;
-            this.medicineBox.ItemHeight = 24;
-            this.medicineBox.Location = new System.Drawing.Point(22, 222);
+            this.medicineBox.ItemHeight = 35;
+            this.medicineBox.Location = new System.Drawing.Point(71, 324);
             this.medicineBox.Name = "medicineBox";
-            this.medicineBox.Size = new System.Drawing.Size(161, 100);
+            this.medicineBox.Size = new System.Drawing.Size(287, 74);
             this.medicineBox.TabIndex = 5;
             this.medicineBox.SelectedIndexChanged += new System.EventHandler(this.medicineBox_SelectedIndexChanged);
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(214, 226);
+            this.numericUpDown1.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown1.Location = new System.Drawing.Point(71, 452);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.ReadOnly = true;
-            this.numericUpDown1.Size = new System.Drawing.Size(63, 29);
+            this.numericUpDown1.Size = new System.Drawing.Size(63, 38);
             this.numericUpDown1.TabIndex = 6;
             this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // dosageLabel
             // 
             this.dosageLabel.AutoSize = true;
-            this.dosageLabel.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dosageLabel.Location = new System.Drawing.Point(211, 201);
+            this.dosageLabel.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dosageLabel.Location = new System.Drawing.Point(65, 403);
             this.dosageLabel.Name = "dosageLabel";
-            this.dosageLabel.Size = new System.Drawing.Size(102, 18);
+            this.dosageLabel.Size = new System.Drawing.Size(200, 35);
             this.dosageLabel.TabIndex = 7;
             this.dosageLabel.Text = "Dosage in Days";
             // 
             // durationLabel
             // 
             this.durationLabel.AutoSize = true;
-            this.durationLabel.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.durationLabel.Location = new System.Drawing.Point(211, 268);
+            this.durationLabel.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.durationLabel.Location = new System.Drawing.Point(65, 517);
             this.durationLabel.Name = "durationLabel";
-            this.durationLabel.Size = new System.Drawing.Size(112, 18);
+            this.durationLabel.Size = new System.Drawing.Size(220, 35);
             this.durationLabel.TabIndex = 9;
             this.durationLabel.Text = "Duration in Days";
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(214, 293);
+            this.numericUpDown2.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown2.Location = new System.Drawing.Point(71, 566);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.ReadOnly = true;
-            this.numericUpDown2.Size = new System.Drawing.Size(63, 29);
+            this.numericUpDown2.Size = new System.Drawing.Size(63, 38);
             this.numericUpDown2.TabIndex = 8;
             this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
@@ -138,11 +138,11 @@
             // 
             this.prescriptionFormLabel.AutoSize = true;
             this.prescriptionFormLabel.BackColor = System.Drawing.Color.Transparent;
-            this.prescriptionFormLabel.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prescriptionFormLabel.Font = new System.Drawing.Font("Trebuchet MS", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prescriptionFormLabel.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.prescriptionFormLabel.Location = new System.Drawing.Point(187, 28);
+            this.prescriptionFormLabel.Location = new System.Drawing.Point(423, 38);
             this.prescriptionFormLabel.Name = "prescriptionFormLabel";
-            this.prescriptionFormLabel.Size = new System.Drawing.Size(171, 35);
+            this.prescriptionFormLabel.Size = new System.Drawing.Size(293, 59);
             this.prescriptionFormLabel.TabIndex = 10;
             this.prescriptionFormLabel.Text = "Prescription";
             // 
@@ -166,10 +166,10 @@
             // 
             // treatmentBtn
             // 
-            this.treatmentBtn.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treatmentBtn.Location = new System.Drawing.Point(76, 354);
+            this.treatmentBtn.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treatmentBtn.Location = new System.Drawing.Point(421, 620);
             this.treatmentBtn.Name = "treatmentBtn";
-            this.treatmentBtn.Size = new System.Drawing.Size(237, 31);
+            this.treatmentBtn.Size = new System.Drawing.Size(295, 59);
             this.treatmentBtn.TabIndex = 12;
             this.treatmentBtn.Text = "Make Prescription";
             this.treatmentBtn.UseVisualStyleBackColor = true;
@@ -196,12 +196,12 @@
             this.printPreviewControl1.AutoZoom = false;
             this.printPreviewControl1.BackColor = System.Drawing.SystemColors.Control;
             this.printPreviewControl1.Document = this.printDocument1;
-            this.printPreviewControl1.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.printPreviewControl1.Location = new System.Drawing.Point(352, 128);
+            this.printPreviewControl1.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.printPreviewControl1.Location = new System.Drawing.Point(741, 214);
             this.printPreviewControl1.Name = "printPreviewControl1";
-            this.printPreviewControl1.Size = new System.Drawing.Size(201, 257);
+            this.printPreviewControl1.Size = new System.Drawing.Size(422, 465);
             this.printPreviewControl1.TabIndex = 13;
-            this.printPreviewControl1.Zoom = 0.22D;
+            this.printPreviewControl1.Zoom = 0.42181818181818181D;
             // 
             // printDialog1
             // 
@@ -210,9 +210,10 @@
             // 
             // refreshPreview
             // 
-            this.refreshPreview.Location = new System.Drawing.Point(480, 111);
+            this.refreshPreview.Font = new System.Drawing.Font("Trebuchet MS", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.refreshPreview.Location = new System.Drawing.Point(1001, 164);
             this.refreshPreview.Name = "refreshPreview";
-            this.refreshPreview.Size = new System.Drawing.Size(59, 23);
+            this.refreshPreview.Size = new System.Drawing.Size(123, 35);
             this.refreshPreview.TabIndex = 14;
             this.refreshPreview.Text = "Preview";
             this.refreshPreview.UseVisualStyleBackColor = true;
@@ -226,7 +227,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 397);
+            this.ClientSize = new System.Drawing.Size(1175, 726);
             this.Controls.Add(this.refreshPreview);
             this.Controls.Add(this.printPreviewControl1);
             this.Controls.Add(this.treatmentBtn);

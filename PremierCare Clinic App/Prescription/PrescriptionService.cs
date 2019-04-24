@@ -32,5 +32,9 @@ namespace PremierCare_Clinic_App.Prescription
 	    public bool DeletePatientPrescription(Prescription prescription) {
 		    return PrescriptionDAO.DeletePatientPrescription(prescription);
 	    }
+
+	    public List<Prescription> GetPatientPrescriptionRecords(int id) {
+		    return PrescriptionDAO.GetPatientPrescriptionRecords(id);
+	    }
     }
 }

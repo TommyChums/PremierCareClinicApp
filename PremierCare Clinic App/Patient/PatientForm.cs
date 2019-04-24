@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PremierCare_Clinic_App.Login;
 using PremierCare_Clinic_App.Patient;
 
 namespace PremierCare_Clinic_App.Patient
@@ -27,9 +28,10 @@ namespace PremierCare_Clinic_App.Patient
         private void backBtn_Click(object sender, EventArgs e) {
 	        if (updatePatient) {
 		        var ViewPatientsForm = new ViewPatientsForm();
-		        ViewPatientsForm.Show();
+		        var LinkedForm = StaffLoginForm.LinkedForm;
+
+				LinkedForm.SetPanelForm(ViewPatientsForm);
             }
-	        this.Close(); 
         }
 
         public void UpdatePatient(Patient patient) {
@@ -38,6 +40,8 @@ namespace PremierCare_Clinic_App.Patient
 	        patientIDLabel.Visible = true;
 	        patientIDTxtBox.Visible = true;
 	        patientIDTxtBox.Text = patient.patient_id.ToString();
+	        backBtn.Visible = true;
+	        
 
 	        patientNameTxtBox.Text = patient.patient_name;
 	        contactNoTxtBox.Text = patient.contact_no;
@@ -121,9 +125,9 @@ namespace PremierCare_Clinic_App.Patient
 				if (!patientUpdated) return;
 				patientIDLabel.Visible = false;
 				patientIDTxtBox.Visible = false;
-				this.Close();
-				var ViewPatientsForm = new ViewPatientsForm();
-				ViewPatientsForm.Show();
+
+                var LinkedForm = StaffLoginForm.LinkedForm;
+				LinkedForm.SetPanelForm(new ViewPatientsForm());
 	        }
 
 
@@ -151,6 +155,9 @@ namespace PremierCare_Clinic_App.Patient
         private void addPatientBtn_MouseHover(object sender, EventArgs e) {
 	        toolTip2.SetToolTip(addPatientBtn,"Add Patient to database");
         }
-		
+
+        private void PatientForm_Load(object sender, EventArgs e) {
+	        if (!updatePatient) backBtn.Visible = false;
+        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28307.421
+VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PremierCare Clinic App", "PremierCare Clinic App\PremierCare Clinic App.csproj", "{C14815AC-0362-4E0E-BB82-EEFDF92D6D82}"
 EndProject
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E0F2AC47-AA3E-42D8-82F4-D21832BE7536}
+		SolutionGuid = {0B1E60C2-1A22-432C-AAC4-A63A442096CA}
 	EndGlobalSection
 EndGlobal

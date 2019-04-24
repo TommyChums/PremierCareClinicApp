@@ -17,8 +17,8 @@ namespace PremierCare_Clinic_App
         [STAThread]
         static void Main() {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StaffLoginForm());
+            Application.Run(StaticClass.StaffLoginForm);
         }
+        
     }
 }

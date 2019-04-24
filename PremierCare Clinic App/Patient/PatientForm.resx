@@ -123,13 +123,13 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="patientNameLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14pt, style=Bold</value>
+    <value>Trebuchet MS, 20pt, style=Bold</value>
   </data>
   <data name="patientNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 128</value>
+    <value>57, 224</value>
   </data>
   <data name="patientNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 24</value>
+    <value>141, 35</value>
   </data>
   <data name="patientNameLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -153,13 +153,13 @@
     <value>True</value>
   </data>
   <data name="contactNoLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14pt, style=Bold</value>
+    <value>Trebuchet MS, 20pt, style=Bold</value>
   </data>
   <data name="contactNoLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 179</value>
+    <value>57, 295</value>
   </data>
   <data name="contactNoLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 24</value>
+    <value>222, 35</value>
   </data>
   <data name="contactNoLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -183,13 +183,13 @@
     <value>True</value>
   </data>
   <data name="addressLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14pt, style=Bold</value>
+    <value>Trebuchet MS, 20pt, style=Bold</value>
   </data>
   <data name="addressLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 227</value>
+    <value>570, 224</value>
   </data>
   <data name="addressLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 24</value>
+    <value>117, 35</value>
   </data>
   <data name="addressLabel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -213,13 +213,13 @@
     <value>True</value>
   </data>
   <data name="bloodTypeLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14pt, style=Bold</value>
+    <value>Trebuchet MS, 20pt, style=Bold</value>
   </data>
   <data name="bloodTypeLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 514</value>
+    <value>570, 454</value>
   </data>
   <data name="bloodTypeLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 24</value>
+    <value>154, 35</value>
   </data>
   <data name="bloodTypeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -243,13 +243,13 @@
     <value>True</value>
   </data>
   <data name="allergiesLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14pt, style=Bold</value>
+    <value>Trebuchet MS, 20pt, style=Bold</value>
   </data>
   <data name="allergiesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 464</value>
+    <value>57, 459</value>
   </data>
   <data name="allergiesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 24</value>
+    <value>127, 35</value>
   </data>
   <data name="allergiesLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -273,13 +273,13 @@
     <value>True</value>
   </data>
   <data name="DOBLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14pt, style=Bold</value>
+    <value>Trebuchet MS, 20pt, style=Bold</value>
   </data>
   <data name="DOBLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 415</value>
+    <value>57, 379</value>
   </data>
   <data name="DOBLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 24</value>
+    <value>181, 35</value>
   </data>
   <data name="DOBLabel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -300,13 +300,17 @@
     <value>14</value>
   </data>
   <data name="patientNameTxtBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14pt</value>
+    <value>Trebuchet MS, 20pt</value>
   </data>
   <data name="patientNameTxtBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 125</value>
+    <value>285, 221</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="patientNameTxtBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="patientNameTxtBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 29</value>
+    <value>237, 38</value>
   </data>
   <data name="patientNameTxtBox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -324,13 +328,16 @@
     <value>11</value>
   </data>
   <data name="contactNoTxtBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14pt</value>
+    <value>Trebuchet MS, 20pt</value>
   </data>
   <data name="contactNoTxtBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 176</value>
+    <value>285, 292</value>
+  </data>
+  <data name="contactNoTxtBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="contactNoTxtBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 29</value>
+    <value>237, 38</value>
   </data>
   <data name="contactNoTxtBox.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -348,16 +355,19 @@
     <value>10</value>
   </data>
   <data name="addressTxtBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14pt</value>
+    <value>Trebuchet MS, 20pt</value>
   </data>
   <data name="addressTxtBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 224</value>
+    <value>739, 220</value>
+  </data>
+  <data name="addressTxtBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="addressTxtBox.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="addressTxtBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 163</value>
+    <value>345, 193</value>
   </data>
   <data name="addressTxtBox.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -375,13 +385,16 @@
     <value>9</value>
   </data>
   <data name="allergiesTxtBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14pt</value>
+    <value>Trebuchet MS, 20pt</value>
   </data>
   <data name="allergiesTxtBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 461</value>
+    <value>285, 456</value>
+  </data>
+  <data name="allergiesTxtBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="allergiesTxtBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 29</value>
+    <value>237, 38</value>
   </data>
   <data name="allergiesTxtBox.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -402,13 +415,13 @@
     <value>True</value>
   </data>
   <data name="patientFormLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 20pt, style=Bold</value>
+    <value>Trebuchet MS, 35pt, style=Bold</value>
   </data>
   <data name="patientFormLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>113, 32</value>
+    <value>350, 37</value>
   </data>
   <data name="patientFormLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>311, 31</value>
+    <value>522, 59</value>
   </data>
   <data name="patientFormLabel.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -429,13 +442,16 @@
     <value>7</value>
   </data>
   <data name="addPatientBtn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14pt, style=Bold</value>
+    <value>Microsoft Sans Serif, 20pt, style=Bold</value>
   </data>
   <data name="addPatientBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 599</value>
+    <value>422, 624</value>
+  </data>
+  <data name="addPatientBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="addPatientBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 37</value>
+    <value>304, 48</value>
   </data>
   <data name="addPatientBtn.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -921,12 +937,14 @@
 </value>
   </data>
   <data name="backBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
+    <value>6, 7</value>
+  </data>
+  <data name="backBtn.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="backBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>33, 29</value>
+    <value>33, 36</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="backBtn.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>Zoom</value>
   </data>
@@ -949,16 +967,19 @@
     <value>yyyy/MM/dd</value>
   </data>
   <data name="DOBTxtBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Trebuchet MS, 14pt</value>
+    <value>Trebuchet MS, 20pt</value>
   </data>
   <data name="DOBTxtBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 417</value>
+    <value>285, 375</value>
+  </data>
+  <data name="DOBTxtBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="DOBTxtBox.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>No</value>
   </data>
   <data name="DOBTxtBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 29</value>
+    <value>237, 38</value>
   </data>
   <data name="DOBTxtBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -976,7 +997,7 @@
     <value>4</value>
   </data>
   <data name="bloodTypeTxtBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Trebuchet MS, 14pt, style=Bold</value>
+    <value>Trebuchet MS, 20pt, style=Bold</value>
   </data>
   <data name="bloodTypeTxtBox.Items" xml:space="preserve">
     <value>O+</value>
@@ -1006,10 +1027,13 @@
     <value>undetermined</value>
   </data>
   <data name="bloodTypeTxtBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 511</value>
+    <value>730, 451</value>
+  </data>
+  <data name="bloodTypeTxtBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="bloodTypeTxtBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 32</value>
+    <value>237, 43</value>
   </data>
   <data name="bloodTypeTxtBox.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -1036,22 +1060,25 @@
     <value>62</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>6, 16</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>495, 649</value>
+    <value>1175, 726</value>
   </data>
   <data name="patientIDTxtBox.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="patientIDTxtBox.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Trebuchet MS, 14pt</value>
+    <value>Trebuchet MS, 20pt</value>
   </data>
   <data name="patientIDTxtBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 80</value>
+    <value>576, 140</value>
+  </data>
+  <data name="patientIDTxtBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="patientIDTxtBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 29</value>
+    <value>237, 38</value>
   </data>
   <data name="patientIDTxtBox.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -1075,13 +1102,13 @@
     <value>True</value>
   </data>
   <data name="patientIDLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Trebuchet MS, 14pt, style=Bold</value>
+    <value>Trebuchet MS, 20pt, style=Bold</value>
   </data>
   <data name="patientIDLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>38, 83</value>
+    <value>369, 143</value>
   </data>
   <data name="patientIDLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 24</value>
+    <value>157, 35</value>
   </data>
   <data name="patientIDLabel.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -1108,10 +1135,10 @@
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>221, 401</value>
+    <value>285, 355</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 13</value>
+    <value>72, 16</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -1130,6 +1157,12 @@
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Trebuchet MS, 8.25pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

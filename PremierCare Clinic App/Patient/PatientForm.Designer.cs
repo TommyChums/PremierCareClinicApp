@@ -191,6 +191,7 @@
             // 
             resources.ApplyResources(this.patientIDTxtBox, "patientIDTxtBox");
             this.patientIDTxtBox.Name = "patientIDTxtBox";
+            this.patientIDTxtBox.ReadOnly = true;
             this.patientIDTxtBox.TabStop = false;
             // 
             // PatientForm
@@ -220,6 +221,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PatientForm";
+            this.Load += new System.EventHandler(this.PatientForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.backBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();

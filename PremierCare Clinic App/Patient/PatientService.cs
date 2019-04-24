@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PremierCare_Clinic_App.Appointment;
+using PremierCare_Clinic_App.Invoice;
+using PremierCare_Clinic_App.Prescription;
 
 namespace PremierCare_Clinic_App.Patient
 {
@@ -33,6 +36,17 @@ namespace PremierCare_Clinic_App.Patient
 
 		public bool DeletePatient(Patient patient) {
 			return patientDAO.DeletePatient(patient);
+		}
+
+		public PatientRecordModel GetPatientRecord(Patient patient) {
+			var recordModel = new PatientRecordModel() {
+				Patient = patient,
+				Prescriptions = new PrescriptionService().GetPatientPrescriptionRecords(patient.patient_id),
+				Invoices = new InvoiceService().GetInvoicesByPatientId(patient.patient_id),
+				Appointments = new AppointmentService().GetAppointmentsByPatientId(patient.patient_id)
+			};
+
+			return recordModel;
 		}
 	}
 }

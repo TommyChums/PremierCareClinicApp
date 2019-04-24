@@ -52,71 +52,71 @@
             // patientNameLabel
             // 
             this.patientNameLabel.AutoSize = true;
-            this.patientNameLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientNameLabel.Location = new System.Drawing.Point(20, 83);
+            this.patientNameLabel.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientNameLabel.Location = new System.Drawing.Point(120, 167);
             this.patientNameLabel.Name = "patientNameLabel";
-            this.patientNameLabel.Size = new System.Drawing.Size(84, 24);
+            this.patientNameLabel.Size = new System.Drawing.Size(124, 35);
             this.patientNameLabel.TabIndex = 0;
             this.patientNameLabel.Text = "Patient: ";
             // 
             // patientTxtBox
             // 
-            this.patientTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.patientTxtBox.Location = new System.Drawing.Point(24, 116);
+            this.patientTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.patientTxtBox.Location = new System.Drawing.Point(126, 215);
             this.patientTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.patientTxtBox.Name = "patientTxtBox";
             this.patientTxtBox.ReadOnly = true;
-            this.patientTxtBox.Size = new System.Drawing.Size(146, 29);
+            this.patientTxtBox.Size = new System.Drawing.Size(329, 38);
             this.patientTxtBox.TabIndex = 1;
             // 
             // serviceTxtBox
             // 
-            this.serviceTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serviceTxtBox.Location = new System.Drawing.Point(207, 116);
+            this.serviceTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.serviceTxtBox.Location = new System.Drawing.Point(484, 215);
             this.serviceTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.serviceTxtBox.Name = "serviceTxtBox";
             this.serviceTxtBox.ReadOnly = true;
-            this.serviceTxtBox.Size = new System.Drawing.Size(146, 29);
+            this.serviceTxtBox.Size = new System.Drawing.Size(180, 38);
             this.serviceTxtBox.TabIndex = 3;
             // 
             // doctorLabel
             // 
             this.doctorLabel.AutoSize = true;
-            this.doctorLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.doctorLabel.Location = new System.Drawing.Point(390, 83);
+            this.doctorLabel.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doctorLabel.Location = new System.Drawing.Point(683, 167);
             this.doctorLabel.Name = "doctorLabel";
-            this.doctorLabel.Size = new System.Drawing.Size(73, 24);
+            this.doctorLabel.Size = new System.Drawing.Size(109, 35);
             this.doctorLabel.TabIndex = 2;
             this.doctorLabel.Text = "Doctor:";
             // 
             // doctorTxtBox
             // 
-            this.doctorTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.doctorTxtBox.Location = new System.Drawing.Point(394, 116);
+            this.doctorTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doctorTxtBox.Location = new System.Drawing.Point(689, 215);
             this.doctorTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.doctorTxtBox.Name = "doctorTxtBox";
             this.doctorTxtBox.ReadOnly = true;
-            this.doctorTxtBox.Size = new System.Drawing.Size(146, 29);
+            this.doctorTxtBox.Size = new System.Drawing.Size(329, 38);
             this.doctorTxtBox.TabIndex = 5;
             // 
             // serviceLabel
             // 
             this.serviceLabel.AutoSize = true;
-            this.serviceLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serviceLabel.Location = new System.Drawing.Point(203, 83);
+            this.serviceLabel.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.serviceLabel.Location = new System.Drawing.Point(478, 167);
             this.serviceLabel.Name = "serviceLabel";
-            this.serviceLabel.Size = new System.Drawing.Size(83, 24);
+            this.serviceLabel.Size = new System.Drawing.Size(128, 35);
             this.serviceLabel.TabIndex = 4;
             this.serviceLabel.Text = "Service: ";
             // 
             // updateAppointmentFormLabel
             // 
             this.updateAppointmentFormLabel.AutoSize = true;
-            this.updateAppointmentFormLabel.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateAppointmentFormLabel.Font = new System.Drawing.Font("Trebuchet MS", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateAppointmentFormLabel.ForeColor = System.Drawing.Color.DarkTurquoise;
-            this.updateAppointmentFormLabel.Location = new System.Drawing.Point(162, 28);
+            this.updateAppointmentFormLabel.Location = new System.Drawing.Point(339, 37);
             this.updateAppointmentFormLabel.Name = "updateAppointmentFormLabel";
-            this.updateAppointmentFormLabel.Size = new System.Drawing.Size(279, 35);
+            this.updateAppointmentFormLabel.Size = new System.Drawing.Size(479, 59);
             this.updateAppointmentFormLabel.TabIndex = 6;
             this.updateAppointmentFormLabel.Text = "Update Appointment";
             // 
@@ -124,37 +124,37 @@
             // 
             this.updateDate.CalendarFont = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateDate.CustomFormat = "yyyy/MM/dd";
-            this.updateDate.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateDate.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.updateDate.Location = new System.Drawing.Point(394, 216);
+            this.updateDate.Location = new System.Drawing.Point(484, 351);
             this.updateDate.Name = "updateDate";
-            this.updateDate.Size = new System.Drawing.Size(146, 29);
+            this.updateDate.Size = new System.Drawing.Size(168, 38);
             this.updateDate.TabIndex = 7;
             // 
             // updateDateLabel
             // 
             this.updateDateLabel.AutoSize = true;
-            this.updateDateLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateDateLabel.Location = new System.Drawing.Point(390, 189);
+            this.updateDateLabel.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateDateLabel.Location = new System.Drawing.Point(478, 313);
             this.updateDateLabel.Name = "updateDateLabel";
-            this.updateDateLabel.Size = new System.Drawing.Size(50, 24);
+            this.updateDateLabel.Size = new System.Drawing.Size(73, 35);
             this.updateDateLabel.TabIndex = 8;
             this.updateDateLabel.Text = "Date";
             // 
             // detailsLabel
             // 
             this.detailsLabel.AutoSize = true;
-            this.detailsLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.detailsLabel.Location = new System.Drawing.Point(20, 189);
+            this.detailsLabel.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detailsLabel.Location = new System.Drawing.Point(120, 313);
             this.detailsLabel.Name = "detailsLabel";
-            this.detailsLabel.Size = new System.Drawing.Size(69, 24);
+            this.detailsLabel.Size = new System.Drawing.Size(101, 35);
             this.detailsLabel.TabIndex = 9;
             this.detailsLabel.Text = "Details";
             // 
             // detailsTxtBox
             // 
-            this.detailsTxtBox.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.detailsTxtBox.Location = new System.Drawing.Point(24, 216);
+            this.detailsTxtBox.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detailsTxtBox.Location = new System.Drawing.Point(126, 351);
             this.detailsTxtBox.Multiline = true;
             this.detailsTxtBox.Name = "detailsTxtBox";
             this.detailsTxtBox.Size = new System.Drawing.Size(329, 188);
@@ -163,10 +163,10 @@
             // timeLabel
             // 
             this.timeLabel.AutoSize = true;
-            this.timeLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.timeLabel.Location = new System.Drawing.Point(390, 277);
+            this.timeLabel.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeLabel.Location = new System.Drawing.Point(683, 313);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(51, 24);
+            this.timeLabel.Size = new System.Drawing.Size(78, 35);
             this.timeLabel.TabIndex = 12;
             this.timeLabel.Text = "Time";
             // 
@@ -174,31 +174,31 @@
             // 
             this.updateTime.CalendarFont = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateTime.CustomFormat = "h:mm tt";
-            this.updateTime.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateTime.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.updateTime.Location = new System.Drawing.Point(394, 304);
+            this.updateTime.Location = new System.Drawing.Point(689, 351);
             this.updateTime.Name = "updateTime";
             this.updateTime.ShowUpDown = true;
-            this.updateTime.Size = new System.Drawing.Size(146, 29);
+            this.updateTime.Size = new System.Drawing.Size(146, 38);
             this.updateTime.TabIndex = 11;
             // 
             // chkBxCompleted
             // 
             this.chkBxCompleted.AutoSize = true;
-            this.chkBxCompleted.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBxCompleted.Location = new System.Drawing.Point(394, 376);
+            this.chkBxCompleted.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkBxCompleted.Location = new System.Drawing.Point(689, 500);
             this.chkBxCompleted.Name = "chkBxCompleted";
-            this.chkBxCompleted.Size = new System.Drawing.Size(122, 28);
+            this.chkBxCompleted.Size = new System.Drawing.Size(172, 39);
             this.chkBxCompleted.TabIndex = 13;
             this.chkBxCompleted.Text = "Completed";
             this.chkBxCompleted.UseVisualStyleBackColor = true;
             // 
             // updateButton
             // 
-            this.updateButton.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateButton.Location = new System.Drawing.Point(198, 460);
+            this.updateButton.Font = new System.Drawing.Font("Trebuchet MS", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateButton.Location = new System.Drawing.Point(437, 627);
             this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(204, 36);
+            this.updateButton.Size = new System.Drawing.Size(295, 57);
             this.updateButton.TabIndex = 14;
             this.updateButton.Text = "Update Appointment";
             this.updateButton.UseVisualStyleBackColor = true;
@@ -225,7 +225,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(592, 533);
+            this.ClientSize = new System.Drawing.Size(1175, 726);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.chkBxCompleted);

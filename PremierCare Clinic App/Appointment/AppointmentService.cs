@@ -26,7 +26,11 @@ namespace PremierCare_Clinic_App.Appointment
 		    return appointmentDAO.GetAppointmentById(id);
 	    }
 
-	    public bool UpdateAppointment(Appointment appointment) {
+	    public List<Appointment> GetAppointmentsByPatientId(int id) {
+		    return appointmentDAO.GetAppointmentsByPatientId(id);
+	    }
+
+        public bool UpdateAppointment(Appointment appointment) {
 		    return appointmentDAO.UpdateAppointment(appointment);
 	    }
 

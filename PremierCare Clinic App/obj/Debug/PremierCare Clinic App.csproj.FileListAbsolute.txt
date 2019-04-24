@@ -31,5 +31,6 @@ E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final P
 E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare_Clinic_App.Appointment.Appointment_Form.resources
 E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare_Clinic_App.Appointment.ViewAppointmentsForm.resources
 E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare_Clinic_App.Appointment.UpdateAppointmentForm.resources
-E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare_Clinic_App.Patient.PrescriptionForm.resources
-E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare Clinic App.csprojAssemblyReference.cache
+E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare_Clinic_App.LinkedForm.resources
+E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare_Clinic_App.Prescription.PrescriptionForm.resources
+E:\Users\Ricardo\Desktop\Flash backup\Business Programming\Final Project\Final Project Code\PremierCare Clinic App\PremierCare Clinic App\obj\Debug\PremierCare_Clinic_App.Patient.PatientRecordForm.resources

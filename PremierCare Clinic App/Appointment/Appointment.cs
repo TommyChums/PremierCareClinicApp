@@ -74,7 +74,15 @@ namespace PremierCare_Clinic_App.Appointment
 		    }
         }
 
-	    public bool UpdateAppointment(Appointment appointment) {
+        public List<Appointment> GetAppointmentsByPatientId(int id) {
+	        using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
+		        const string sql = "SELECT * FROM Appointment WHERE patient_id = @patient_id";
+
+		        return connection.Query<Appointment>(sql, new { patient_id = id }).AsList();
+	        }
+        }
+
+        public bool UpdateAppointment(Appointment appointment) {
 		    using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
 			    const string sql =
 				    "UPDATE Appointment SET appointment_date = @date, appointment_time = @time, appointment_details = @details, appointment_completed = @completed " +

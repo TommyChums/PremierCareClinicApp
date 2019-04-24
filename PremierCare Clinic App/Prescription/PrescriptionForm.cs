@@ -9,19 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PremierCare_Clinic_App.Drug;
 using PremierCare_Clinic_App.Login;
-using PremierCare_Clinic_App.Prescription;
+using PremierCare_Clinic_App.Patient;
 
-namespace PremierCare_Clinic_App.Patient
+namespace PremierCare_Clinic_App.Prescription
 {
 	public partial class PrescriptionForm : Form {
 
 		private DrugService drugService = new DrugService();
 		private PrescriptionService prescriptionService = new PrescriptionService();
-		private Patient patient = null;
+		private Patient.Patient patient = null;
 		private bool update = false;
 		private Doctor.Doctor doctor = LoggedInStaff.loggedInDoctor;
 
-		public void setPatient(Patient selectedPatient) {
+		public void setPatient(Patient.Patient selectedPatient) {
 			patient = selectedPatient;
 		}
 
@@ -46,8 +46,8 @@ namespace PremierCare_Clinic_App.Patient
 
         private void pictureBox1_Click(object sender, EventArgs e) {
             var patientForm = new ViewPatientsForm();
-            patientForm.Show();
-			this.Close();
+            var LinkedForm = StaffLoginForm.LinkedForm;
+			LinkedForm.SetPanelForm(patientForm);
         }
 
         private void medicineBox_SelectedIndexChanged(object sender, EventArgs e) {
@@ -74,7 +74,7 @@ namespace PremierCare_Clinic_App.Patient
 
 	        if (printDialog1.ShowDialog() == DialogResult.OK) { 
 			   printDocument1.Print();
-			   Prescription.Prescription prescription = new Prescription.Prescription() {
+			   Prescription prescription = new Prescription() {
 				   dosage_per_day = int.Parse(numericUpDown1.Text),
 				   duration_in_days = int.Parse(numericUpDown2.Text),
 				   patient_id = patient.patient_id,

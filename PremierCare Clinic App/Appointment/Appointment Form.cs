@@ -50,9 +50,9 @@ namespace PremierCare_Clinic_App.Appointment
         }
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e) {
-	        this.Close();
-	        var viewPatientForm = new ViewPatientsForm();
-	        viewPatientForm.Show();
+	        var LinkedForm = StaffLoginForm.LinkedForm;
+
+	        LinkedForm.SetPanelForm(new ViewPatientsForm());
         }
 
         private void pictureBox1_MouseHover(object sender, EventArgs e) {
@@ -110,12 +110,16 @@ namespace PremierCare_Clinic_App.Appointment
 	        MessageBox.Show(createdAppointment ? "Appointment Successfully Created" : "Failed to create appointment");
 
 	        if (createdAppointment) {
-				this.Close();
 				var viewPatientForm = new ViewPatientsForm();
-				viewPatientForm.Show();
-	        }
+
+				StaffLoginForm.LinkedForm.SetPanelForm(viewPatientForm);
+            }
         }
-		
-        
+
+        private void pictureBox1_Click(object sender, EventArgs e) {
+	        var LinkedForm = StaffLoginForm.LinkedForm;
+
+			LinkedForm.SetPanelForm(new ViewPatientsForm());
+        }
     }
 }

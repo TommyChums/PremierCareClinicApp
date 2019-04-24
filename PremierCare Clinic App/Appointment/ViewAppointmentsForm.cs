@@ -47,10 +47,49 @@ namespace PremierCare_Clinic_App.Appointment
             InitializeComponent();
         }
 
+        private void setColumnSize() {
+	        appointmentGridView.Columns[0].HeaderText = "ID";
+	        appointmentGridView.Columns[0].Width = 60;
+	        appointmentGridView.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+	        appointmentGridView.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            appointmentGridView.Columns[1].HeaderText = "Name";
+            appointmentGridView.Columns[1].Width = 290;
+            appointmentGridView.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            appointmentGridView.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            appointmentGridView.Columns[2].HeaderText = "Date";
+            appointmentGridView.Columns[2].Width = 150;
+            appointmentGridView.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            appointmentGridView.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            appointmentGridView.Columns[3].HeaderText = "Time";
+            appointmentGridView.Columns[3].Width = 150;
+            appointmentGridView.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            appointmentGridView.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            appointmentGridView.Columns[4].HeaderText = "Service";
+            appointmentGridView.Columns[4].Width = 160;
+            appointmentGridView.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            appointmentGridView.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            appointmentGridView.Columns[5].HeaderText = "Doctor";
+            appointmentGridView.Columns[5].Width = 200;
+            appointmentGridView.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            appointmentGridView.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            appointmentGridView.Columns[6].HeaderText = "Completed";
+			appointmentGridView.Columns[6].Width = 120;
+			appointmentGridView.Columns[6].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+			appointmentGridView.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
+
         private void ViewAppointments_Load(object sender, EventArgs e) {
+			appointmentGridView.Font = new Font(new FontFamily("Trebuchet MS"), 14, FontStyle.Regular);
             appointmentsToDisplay = appointmentService.GetAppointments(LoggedInStaff.loggedInStaff);
             appointmentGridView.DataSource = appointmentsToDisplay;
             dateTimePicker1.Checked = false;
+			setColumnSize();
         }
 
         private void appointmentSearch_TextChanged(object sender, EventArgs e) {
@@ -58,15 +97,7 @@ namespace PremierCare_Clinic_App.Appointment
             appointmentGridView.DataSource = appointmentsToDisplay;
             switchNum = 1;
         }
-
-        private void pictureBox1_MouseHover(object sender, EventArgs e) {
-	        toolTip1.SetToolTip(pictureBox1, "Close this form");
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e) {
-	        this.Close();
-        }
-
+		
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e) {
 
             switchNum = dateTimePicker1.Checked ? 2 : 1;
@@ -84,6 +115,7 @@ namespace PremierCare_Clinic_App.Appointment
             }
 
             appointmentGridView.DataSource = appointmentsToDisplay;
+			setColumnSize();
         }
 
         private void appointmentGridView_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e) {
@@ -100,10 +132,10 @@ namespace PremierCare_Clinic_App.Appointment
         private void updateAppointmentBtn_Click(object sender, EventArgs e) {
 	        if (appointment == null || displayedAppointment == null) return;
 
+	        var LinkedForm = StaffLoginForm.LinkedForm;
             var updateAppointmentForm = new UpdateAppointmentForm();
-			updateAppointmentForm.Appointments(displayedAppointment, appointment);
-            updateAppointmentForm.Show();
-			this.Hide();
+            updateAppointmentForm.Appointments(displayedAppointment, appointment);	
+			LinkedForm.SetPanelForm(updateAppointmentForm);
         }
 
         private void appointmentCompleteBtn_Click(object sender, EventArgs e) {

@@ -88,6 +88,12 @@
     <Compile Include="Appointment\ViewAppointmentsForm.Designer.cs">
       <DependentUpon>ViewAppointmentsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LinkedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LinkedForm.Designer.cs">
+      <DependentUpon>LinkedForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\Csr_Login.cs" />
     <Compile Include="Doctor\Doctor.cs" />
     <Compile Include="Doctor\DoctorService.cs" />
@@ -110,11 +116,18 @@
     <Compile Include="Invoice\Invoice.cs" />
     <Compile Include="Invoice\InvoiceService.cs" />
     <Compile Include="Patient\Patient.cs" />
-    <Compile Include="Patient\PatientService.cs" />
-    <Compile Include="Patient\PrescriptionForm.cs">
+    <Compile Include="Patient\PatientRecordForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Patient\PrescriptionForm.Designer.cs">
+    <Compile Include="Patient\PatientRecordForm.Designer.cs">
+      <DependentUpon>PatientRecordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\PatientRecordModel.cs" />
+    <Compile Include="Patient\PatientService.cs" />
+    <Compile Include="Prescription\PrescriptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prescription\PrescriptionForm.Designer.cs">
       <DependentUpon>PrescriptionForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Patient\ViewPatientsForm.cs">
@@ -127,10 +140,16 @@
     <Compile Include="Prescription\PrescriptionService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Service\Service.cs" />
     <Compile Include="Service\ServiceService.cs" />
     <Compile Include="Staff\Staff.cs" />
     <Compile Include="Staff\StaffService.cs" />
+    <Compile Include="StaticClass.cs" />
     <EmbeddedResource Include="Appointment\Appointment Form.resx">
       <DependentUpon>Appointment Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Appointment\ViewAppointmentsForm.resx">
       <DependentUpon>ViewAppointmentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LinkedForm.resx">
+      <DependentUpon>LinkedForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\PatientForm.aa-ET.resx">
       <DependentUpon>PatientForm.cs</DependentUpon>
@@ -149,7 +171,10 @@
     <EmbeddedResource Include="Login\StaffLoginForm.resx">
       <DependentUpon>StaffLoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Patient\PrescriptionForm.resx">
+    <EmbeddedResource Include="Patient\PatientRecordForm.resx">
+      <DependentUpon>PatientRecordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prescription\PrescriptionForm.resx">
       <DependentUpon>PrescriptionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\ViewPatientsForm.resx">
@@ -157,14 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\PremierCare_Clinic_App.Drug.Drug.datasource" />
     <None Include="Properties\Settings.settings">
@@ -190,6 +210,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PrintIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up-5121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-5122.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-5121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down-5123.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseBtn1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

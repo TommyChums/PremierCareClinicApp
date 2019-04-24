@@ -86,6 +86,19 @@ Create Table Prescription (
     foreign key (doctor_id) references Doctor(doctor_id)
 );
 
+DROP Table If Exists Prescription_Record;
+Create Table Prescription_Record (
+	prescription_id int auto_increment not null primary key,
+    dosage_per_day int not null,
+    duration_in_days int not null,
+    patient_id int not null,
+	drug_id int not null,
+    doctor_id int not null,
+    foreign key (patient_id) references Patient(patient_id),
+    foreign key (drug_id) references Drug(drug_id),
+    foreign key (doctor_id) references Doctor(doctor_id)
+);
+
 DROP Table If Exists Invoice;
 Create Table Invoice (
 	invoice_id int auto_increment not null primary key,
@@ -113,3 +126,15 @@ DELIMITER ;
 
 # } end of Procedures
 
+# Create Triggers {
+DELIMITER //
+CREATE TRIGGER prescription_delete
+BEFORE DELETE
+	ON Prescription FOR EACH ROW
+BEGIN
+	INSERT INTO Prescription_Record(prescription_id, dosage_per_day, duration_in_days, patient_id, drug_id, doctor_id) 
+    VALUES(OLD.prescription_id, OLD.dosage_per_day, OLD.duration_in_days, OLD.patient_id, OLD.drug_id, OLD.doctor_id);
+END; //
+DELIMITER ;    
+
+# } end of Triggers
