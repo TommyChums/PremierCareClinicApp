@@ -32,16 +32,19 @@ namespace PremierCare_Clinic_App
 	        }
 
 	        if (LoggedInStaff.loggedInStaff != null) {
-		        welcomeLabel.Text = "Welcome " + LoggedInStaff.loggedInStaff.staff_name;
+		        label1.Text += LoggedInStaff.loggedInStaff.staff_name;
 	        }
 	        else {
+		        pictureBox2.Enabled = false;
 		        flowLayoutPanel1.Enabled = false;
-		        welcomeLabel.Text = "Welcome " + LoggedInStaff.loggedInDoctor.doctor_name;
+		        label1.Text += LoggedInStaff.loggedInDoctor.doctor_name;
 		        SetPanelForm(new ViewPatientsForm());
             }
         }
 
         public void SetPanelForm(Form form) {
+	        pictureBox3.Visible = false;
+	        welcomeLabel.Visible = false;
 	        formPanel.Controls.Clear();
 	        form.TopLevel = false;
 	        formPanel.Controls.Add(form);
@@ -117,6 +120,15 @@ namespace PremierCare_Clinic_App
 			LoggedInStaff.loggedInDoctor = null;
             StaticClass.LinkedForm = null;
 			StaticClass.StaffLoginForm.ShowForm();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e) {
+			formPanel.Controls.Clear();
+	        pictureBox3.Visible = true;
+	        welcomeLabel.Visible = true;
+			formPanel.Controls.Add(pictureBox3);
+            formPanel.Controls.Add(welcomeLabel);
+            welcomeLabel.BringToFront();
         }
     }
 }

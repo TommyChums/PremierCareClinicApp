@@ -27,5 +27,9 @@ namespace PremierCare_Clinic_App.Patient
 	        dataGridView2.DataSource = recordModel.Invoices;
 	        dataGridView3.DataSource = recordModel.Prescriptions;
         }
+
+        private void backBtn_Click(object sender, EventArgs e) {
+	        StaticClass.LinkedForm.SetPanelForm(new ViewPatientsForm());
+        }
     }
 }

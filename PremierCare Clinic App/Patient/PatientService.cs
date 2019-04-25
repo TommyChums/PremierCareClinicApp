@@ -13,6 +13,7 @@ namespace PremierCare_Clinic_App.Patient
 	//For Business Logic as well as DAO operations
 	public class PatientService {
 		PatientDAO patientDAO = new PatientDAO();
+		PatientRecordDAO patientRecordDAO = new PatientRecordDAO();
 
 		public bool CreatePatient(Patient patient) {
 			return patientDAO.CreatePatient(patient);
@@ -38,12 +39,12 @@ namespace PremierCare_Clinic_App.Patient
 			return patientDAO.DeletePatient(patient);
 		}
 
-		public PatientRecordModel GetPatientRecord(Patient patient) {
+		public PatientRecordModel GetPatientRecord(Patient patient) { 
 			var recordModel = new PatientRecordModel() {
 				Patient = patient,
-				Prescriptions = new PrescriptionService().GetPatientPrescriptionRecords(patient.patient_id),
-				Invoices = new InvoiceService().GetInvoicesByPatientId(patient.patient_id),
-				Appointments = new AppointmentService().GetAppointmentsByPatientId(patient.patient_id)
+				Prescriptions = patientRecordDAO.GetPrescriptionRecords(patient.patient_id),
+				Invoices = patientRecordDAO.GetInvoiceRecords(patient.patient_id),
+				Appointments = patientRecordDAO.GetAppointmentRecords(patient.patient_id)
 			};
 
 			return recordModel;

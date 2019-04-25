@@ -102,6 +102,7 @@ Create Table Prescription_Record (
 DROP Table If Exists Invoice;
 Create Table Invoice (
 	invoice_id int auto_increment not null primary key,
+    invoice_date varchar(50) not null,
     patient_id int not null,
     service_id int not null,
     drug_names varchar(255),
@@ -114,6 +115,8 @@ Create Table Invoice (
 
 # Create Procedures {
 
+DROP procedure IF EXISTS `GetAppointments`;
+
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `GetAppointments`(IN staff int)
 BEGIN
@@ -121,6 +124,40 @@ SELECT appointment_id, patient_name, appointment_date, appointment_time, service
 FROM Patient, Appointment, Service, Doctor
 WHERE Patient.patient_id = Appointment.patient_id AND Service.service_id = Appointment.service_id 
 AND Doctor.doctor_id = Appointment.doctor_id AND Appointment.staff_id = staff;
+END$$
+DELIMITER ;
+
+DROP procedure IF EXISTS `GetPrescriptions`;
+
+DELIMITER $$
+USE `premiercareclinic`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetPrescriptions`(IN pID int)
+BEGIN
+	SELECT prescription_id AS PID, patient_name AS Patient, drug_name AS Medication, dosage_per_day AS Dosage, duration_in_days AS Duration, doctor_name AS Doctor
+    FROM prescription_record, patient, drug, doctor
+    WHERE prescription_record.patient_id = pID AND prescription_record.patient_id = patient.patient_id AND prescription_record.drug_id = drug.drug_id AND prescription_record.doctor_id = doctor.doctor_id;
+END$$
+DELIMITER ;
+
+DROP procedure IF EXISTS `GetInvoices`;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetInvoices`(IN pID int)
+BEGIN
+	SELECT invoice_id AS InvID, invoice_date AS InvDate, patient_name AS Patient, service_category AS Service, drug_names AS Medications, total_cost AS Cost
+    FROM invoice, patient, service
+    WHERE invoice.patient_id = pID AND invoice.patient_id = patient.patient_id AND invoice.service_id = service.service_id;
+END$$
+DELIMITER ;
+
+DROP procedure IF EXISTS `GetPatientAppointments`;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetPatientAppointments`(IN pID int)
+BEGIN
+	SELECT appointment_id AS AppID, appointment_date AS AppDate, appointment_time AS AppTime, appointment_details AS Details, patient_name AS Patient, doctor_name AS Doctor, staff_name AS CSR, service_category AS Service, appointment_completed AS Completed
+    FROM appointment, patient, doctor, staff, service
+    WHERE appointment.patient_id = pID AND appointment.patient_id = patient.patient_id AND appointment.doctor_id = doctor.doctor_id AND appointment.staff_id = staff.staff_id AND appointment.service_id = service.service_id;
 END$$
 DELIMITER ;
 

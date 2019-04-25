@@ -121,9 +121,11 @@ namespace PremierCare_Clinic_App.Patient
         }
 
         private void patientRecordsBtn_Click(object sender, EventArgs e) {
+            if (selectedPatient == null) return;
+
 	        var recordForm = new PatientRecordForm();
 			recordForm.setRecordModel(selectedPatient);
-			recordForm.Show();
+			StaticClass.LinkedForm.SetPanelForm(recordForm);
         }
     }
 }

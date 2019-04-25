@@ -86,6 +86,11 @@ namespace PremierCare_Clinic_App.Patient
 	        if (errorProvider2.GetError(contactNoTxtBox).Length >= 1) return;
 
 	        if (patientToUpdate == null && !updatePatient) {
+
+		        if (bloodTypeTxtBox.Text.Trim().Length < 1) {
+			        bloodTypeTxtBox.SelectedIndex = bloodTypeTxtBox.FindStringExact("undetermined");
+		        }
+
 		        patientToUpdate = new Patient() {
 			        patient_name = patientNameTxtBox.Text.Trim(),
 			        contact_no = contactNoTxtBox.Text.Trim(),

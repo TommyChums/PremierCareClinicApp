@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PremierCare_Clinic_App.Appointment;
 using PremierCare_Clinic_App.Drug;
 using PremierCare_Clinic_App.Login;
 using PremierCare_Clinic_App.Patient;
@@ -55,7 +56,24 @@ namespace PremierCare_Clinic_App.Prescription
         }
 
         private void treatmentBtn_Click(object sender, EventArgs e) {
-	        if (numericUpDown1.Text.Equals("0") || numericUpDown2.Text.Equals("0")) {
+	        var appointments = new AppointmentService().GetAppointmentsByPatientId(patient.patient_id);
+		
+	        if (appointments.Count() < 1) { 
+		        MessageBox.Show(@"This Patient has no Appointments. Failed to Create Prescription");
+				return;
+			}
+
+	        foreach (var app in appointments) {
+		        if (app.appointment_completed == false) {
+			        break;
+		        }
+
+		        MessageBox.Show(@"This Patient has no Appointments. Failed to Create Prescription");
+		        return;
+	        }
+
+
+			if (numericUpDown1.Text.Equals("0") || numericUpDown2.Text.Equals("0")) {
 
 				errorProvider1.Clear();
 

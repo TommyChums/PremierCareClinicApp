@@ -180,6 +180,7 @@ namespace PremierCare_Clinic_App.Appointment
 
 			invoice = new Invoice.Invoice() {
 				patient_id = invoicePatient.patient_id,
+				invoice_date = appointment.appointment_date,
 				service_id = invoiceService.service_id,
 				drug_names = stringBuilder.ToString(),
 				total_cost = invoiceTotalCost
@@ -225,6 +226,7 @@ namespace PremierCare_Clinic_App.Appointment
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e) {
 	        e.Graphics.DrawString("Patient Name: " + patientService.GetPatientById(appointment.patient_id).patient_name 
+												   + "\t\t" + appointment.appointment_date + "\n"
 	                                               + "\n\nMedication: " + invoice.drug_names + "cost: $" + drugCost 
 	                                               + "\n\nService: " + serviceService.GetServiceById(appointment.service_id).service_category + "\ncost: $" + serviceCost 
 	                                               + "\n\nTotal Cost: $" + (drugCost + serviceCost),

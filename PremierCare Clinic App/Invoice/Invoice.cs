@@ -11,6 +11,7 @@ namespace PremierCare_Clinic_App.Invoice
 {
     public class Invoice {
         public int invoice_id { get; set; }
+        public string invoice_date { get; set; }
         public int patient_id { get; set; }
         public int service_id { get; set; }
         public string drug_names { get; set; }
@@ -20,10 +21,10 @@ namespace PremierCare_Clinic_App.Invoice
     public class InvoiceDAO {
 	    public bool CreateInvoice(Invoice invoice) {
 		    using (var connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["premierCare"].ConnectionString)) {
-			    const string sql = "INSERT INTO Invoice(patient_id, service_id, drug_names, total_cost) VALUES(@patient, @service, @drugs, @cost)";
+			    const string sql = "INSERT INTO Invoice(patient_id, invoice_date, service_id, drug_names, total_cost) VALUES(@patient, @date , @service, @drugs, @cost)";
 
 			    var rowsAffected =
-				    connection.Execute(sql, new {patient = invoice.patient_id, service = invoice.service_id, drugs = invoice.drug_names, cost = invoice.total_cost});
+				    connection.Execute(sql, new {patient = invoice.patient_id, date = invoice.invoice_date, service = invoice.service_id, drugs = invoice.drug_names, cost = invoice.total_cost});
 
 			    return rowsAffected > 0;
 		    }
